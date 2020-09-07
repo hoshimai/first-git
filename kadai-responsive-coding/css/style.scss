@@ -1,0 +1,191 @@
+@import "compass";
+@import url('https://fonts.googleapis.com/css?family=Abel');
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #0d0015;
+$subColor: #1d0c33;
+$keyColor: #91d934;
+$fontColor: #ffffff;
+
+
+/* Base
+------------------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em; 
+  background-color: $baseColor;
+}
+
+a {
+  @include link-colors($keyColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
+  text-decoration: none;
+}
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center;
+}
+
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Font
+------------------------------------------------------------*/
+.abel {
+  font-family: 'Abel', sans-serif;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Header
+------------------------------------------------------------*/
+header {
+  .restaurant {
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    padding: 0 0;
+    clear: both;
+  }
+  .restaurant-icon {
+    height: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+// Common Styles
+section {
+  padding: 60px 0;
+  .container {
+    width: 90%;
+    @extend .block-center;
+  }
+  h2 {
+    @extend .abel;
+    font-size: 3.2rem;
+    @extend .uppercase;
+  }
+}
+
+// Menus
+#menus {
+  background-color: $subColor;
+  .container {
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(row);    // スキルボックスを横に並べる
+  }
+  h1 {
+      font-size: 4.2rem;
+      color: $keyColor;
+      padding-bottom: 10px;
+  }
+  h2 {
+    color: $baseColor;
+    margin-bottom: 60px;
+  }
+  .menu-box {
+    @include flex(1);
+    margin: 10px 10px;                     // 上下にマージン
+    padding: 20px;
+    background-color: $baseColor;
+    @include border-radius(4px);
+    @include box-sizing(border-box);
+    .menu-img{
+      width: 100%;
+      padding-bottom: 10px;
+    }
+  }
+  i {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px;
+    padding-top: 15px;
+    background-color: $keyColor;
+    font-size: 4.5rem;
+    color: #FFF;
+    text-align: center;
+    @include box-sizing(border-box);
+    @include border-radius(50%);
+    @extend .block-center;
+  }
+  h3 {
+    @extend .abel;
+    @extend .uppercase;
+    color: $keyColor;
+    margin-bottom:10px;
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+}
+
+/* Footer
+------------------------------------------------------------*/
+footer {
+  background-color: $subColor;
+  padding-top: 20px;
+  padding-bottom: 100px;
+  text-align: center;
+  color: #FFF;
+  h1 {
+      font-size: 4.2rem;
+      color: $keyColor;
+      padding-bottom: 10px;
+  }
+  .button-area {
+    background-color: $keyColor;
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    .button {
+      display: inline-block;
+      padding: 0px 57.2px;
+      font-size: 2rem;
+      color: $subColor;
+      line-height: 60px;
+      font-weight: bold;
+  }
+  }
+  
+}
+// desktop
+@media (max-width: 768px) {
+
+/* Header
+------------------------------------------------------------*/
+header {
+  .restaurant {
+    height: 250px;
+  }
+  .restaurant-icon {
+    height: 250px;
+  }
+}
+
+/* Menus
+------------------------------------------------------------*/
+  #menus {
+    .container {
+      @include flex-direction(column);     // スキルボックスを縦に並べる
+      justify-content: space-between;
+    }
+    .menu-box {
+      margin: 10px 10px;                   // 左右にマージン
+    }
+  }
+}
