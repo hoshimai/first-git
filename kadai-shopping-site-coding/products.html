@@ -22,7 +22,6 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
-  <!-- Owl Carousel CSS -->
   <link rel="stylesheet" href="js/owlcarousel/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="js/owlcarousel/assets/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -34,9 +33,7 @@
 
   <!-- JavaScript
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- Owl Carousel JS -->
   <script src="js/owlcarousel/owl.carousel.min.js"></script>
-  <!-- Owl Carouselを動作させるために追加 -->
   <script src="js/test-carousel.js"></script>
 
   <!-- Favicon
@@ -86,7 +83,7 @@
     <div class="container">
       <div class="row">
         <div class="nine columns list-contents">
-          <div class="pan-list">
+          <div class="pan-list pan-list-pd">
             <ul class="pan-list-ul">
               <li class="pan-list-li home-img"></li>
               <li class="pan-list-li">HOME</li>
@@ -97,12 +94,12 @@
             </ul>
           </div>
           <div class="products-detail-top">
-            <p>商品名が入ります<span>fa0001-91</span></p>
+            <div class="products-detail-top-txt"><p>商品名が入ります<span>fa0001-91</span></p></div>
           </div>
-          <div class="border-line"></div>
-          <div class="new-items">
-            <div class="new-items-b">
-              <ul class="flex-b-ul">
+          <div class="border-line-bg"><div class="border-line"></div></div>
+          <div class="new-items product-d-items">
+            <div class="new-items-b product-d-items-b">
+              <ul class="flex-b-ul flex-products">
                 <li class="flex-b-li flex-products-1">
                   <img src="./images/products/pro_img_01.jpg" alt="item">
                 </li>
@@ -126,7 +123,7 @@
           <div class="color-size">
             <div class="color-size-logo small-logo"></div>
             <div class="color-size-table">
-              <table class="color-table" border="1" style="border-collapse: collapse">
+              <table class="color-table" style="border-collapse: collapse">
                 <tr>
                   <th></th>
                   <th>カラー1</th>
@@ -159,9 +156,9 @@
           <div class="product-txt">
             <div class="product-txt-logo">商品説明</div>
             <div class="product-title">■説明タイトル説明タイトル説明タイトル説明タイトル</div>
-            <p>説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト<br>説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト<br>説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト</p>
+            <div class="product-txt-c"><p>説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト<br>説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト<br>説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト</p></div>
             <div class="product-table">
-              <table class="color-table product-table-c" border="1" style="border-collapse: collapse">
+              <table class="color-table product-table-c" style="border-collapse: collapse">
                 <tr>
                   <th>カラー</th>
                   <td>説明文が入ります説明文が入ります説明文が入ります</td>
@@ -176,18 +173,18 @@
           <div class="recent-items">
             <div class="recent-items-logo"></div>
             <div class="recent-items-b">
-              <ul class="flex-b-ul">
-                <li class="flex-b-li">
+              <ul class="flex-b-ul flex-recent-ul">
+                <li class="flex-b-li flex-recent-li">
                   <img src="./images/top/item_07.jpg" alt="item">
                   <p>商品名が入ります商品名が入ります商品名が入ります</p>
                   <p>¥10,000 (tax in)</p>
                 </li>
-                <li class="flex-b-li">
+                <li class="flex-b-li flex-recent-li">
                   <img src="./images/top/item_08.jpg" alt="item">
                   <p>商品名が入ります商品名が入ります商品名が入ります</p>
                   <p>¥10,000 (tax in)</p>
                 </li>
-                <li class="flex-b-li">
+                <li class="flex-b-li flex-recent-li">
                   <img src="./images/top/item_09.jpg" alt="item">
                   <p>商品名が入ります商品名が入ります商品名が入ります</p>
                   <p>¥10,000 (tax in)</p>
@@ -267,12 +264,13 @@
           </div>
         </div>
       </div>
+      <div class="page-top" id="page-top">
+        <div class="page_top_img"><a href="#"><img src="images/top/pagetop.png" alt="pagetop"></a></div>
+      </div>
+      <div class="footer-line"></div>
+    </div>
   </main>
   <footer>
-    <div class="page-top" id="page-top">
-      <div class="page_top_img"><a href="#"><img src="images/top/pagetop.png" alt="pagetop"></a></div>
-    </div>
-    <div class="footer-line"></div>
     <div class="container">
       <div class="row">
         <div class="twelve columns f_txt">

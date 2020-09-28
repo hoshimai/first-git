@@ -28,3 +28,11 @@ $(document).ready(function(){
     });
 });
 
+$(window).load(function(){
+  //products
+  $('.flex-products-2 img').click(function(){
+    var img_src = $(this).attr("src");
+    $('.flex-products-1 img').attr("src", img_src);
+  });
+});
+
