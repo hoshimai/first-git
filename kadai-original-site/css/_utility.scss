@@ -1,0 +1,203 @@
+@charset "utf-8";
+
+@import 'variables'; // 変数
+@import 'mixins'; // 関数
+
+/* Base
+------------------------------------------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+
+    font-size: 62.5%;
+
+}
+
+body {
+    font-family: $ja_font;
+}
+
+/* Align
+------------------------------------------------------------*/
+
+.text-center {
+    text-align: center;
+}
+
+/* Layout 
+------------------------------------------------------------*/
+
+.block-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: rgba(201,23,30,0.8) no-repeat center center;
+    // border: 1px solid $p_color_l;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+    @include fontsize(16);
+        a {
+        display: flex;
+        align-items: center;//縦中央揃え
+        justify-content: center;//横中央揃え
+        text-decoration-line: none;
+        color: $ac_color;
+    }
+}
+
+.btn:hover {
+    background: rgba(201,23,30,0.25) no-repeat center center;
+    transition: 0.25s;
+}
+
+.next-back-btn {
+    @include widthm($pc: 40, $sp: 95, $mautoSp: 1);
+    height: 33px;
+    padding-bottom: 20px;
+    text-align: center;
+    .d-btn {
+        color: $ac_color;
+        font-weight: bold;
+        height: 100%;
+        width: 40%;
+        background: rgba(201,23,30,0.8) no-repeat center center;
+        font-weight: bold;
+        border-radius: 5px;
+        padding: 5px;
+        padding-bottom: 40px;
+        @include fontsize(16);
+    }
+    .d-btn:hover {
+        background: rgba(201,23,30,0.25) no-repeat center center;
+        transition: 0.25s;
+        border-color: darken(#bbb, 30%);
+    }
+    .s-btn {
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+.logo {
+    @include widthm($pc: 100 ,$sp: 100);
+    display: inline-block;
+    content: "";
+    height: 70px;
+    margin: 30px 0 auto;
+    // background: url("../images/Top/News_logo.png") no-repeat center 10%;
+    // background-size: 100% auto;
+}
+
+.slogo {
+    @include widthm($pc: 100 ,$sp: 100);
+    display: inline-block;
+    content: "";
+    height: 70px;
+    margin: 30px 0 auto;
+}
+
+.fig {
+    @include widthm($pc: 100 ,$sp: 100);
+    display: inline-block;
+    content: "";
+    height: 200px;
+    margin: 0 auto;
+}
+
+ .s-info {
+    @include widthm($pc: 100 ,$sp: 100, $mautoSp: 1, $mautoPc: 1);
+    table {
+        border-collapse: collapse;
+        @include fontsize(16);
+        color: $p_color_l;
+        background: rgba(112,112,112,0.1);
+        border: 2px solid $p_color_d;
+        border-radius: 2px;
+        margin: 30px auto;
+        padding: 0px;
+        th,
+        td {
+            border: 1px solid $p_color_d;
+            padding: 20px;
+        }
+        th {
+            @include fontsize(16);
+            color: $p_color_l;
+            text-align: center;
+            margin: 0;
+        }
+    }
+}//s-info
+
+/* Flexbox
+------------------------------------------------------------*/
+
+.flex-b-ul {
+    @include widthm($pc: 100);
+    @include fontsize(12);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 0 auto;
+    color: #000000;
+    justify-content: space-between;
+}
+
+.flex-b-li {
+    align-self: flex-start;
+    list-style: none;
+    background: white;
+    padding: 10px 10px;
+    margin: 0 0px 2px 0;
+    img {
+        width: 100%;
+    }
+}
+
+.flex-b-ul-c {
+    @include widthm($pc: 100);
+    @include fontsize(12);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: columns;
+    align-items: flex-start;
+    margin: 0 auto;
+    color: #000000;
+    justify-content: space-between;
+}
+
+// .flex-b-li {
+//     align-self: flex-start;
+//     list-style: none;
+//     background: white;
+//     padding: 10px 10px;
+//     margin: 0 0px 2px 0;
+//     img {
+//         width: 100%;
+//     }
+// }
+
+
+/* Format
+------------------------------------------------------------*/
+.date {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.border_s {
+    border-bottom: solid 1px $p_color_d;
+}
+

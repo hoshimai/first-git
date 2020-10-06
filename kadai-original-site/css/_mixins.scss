@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+@mixin fontsize($size: 24) {
+    font-size: $size + px;
+    font-size: ($size / 10) * 1rem;
+} //@mixin fontsize
+
+@mixin widthm($pc: 85, $sp: 95, $mautoSp: null, $mautoPc: null) {
+    width: $sp * 1%;
+    @if $mautoSp==1 {
+        margin: 0 auto;
+    }
+    @media (min-width: 550px) {
+        width: $pc * 1%;
+        @if $mautoPc==1 {
+            margin: 0 auto;
+        }
+    }
+} //@mixin widthm
+
+@mixin pcMarginA() {
+    @media (min-width: 550px) {
+        margin: 0 auto;
+    }
+} //@mixin pcMarginA()
+
+@mixin absolute($top:null, $right:null, $bottom:null, $left:null) {
+    display: block;
+    position: absolute;
+    @if $top !=null {
+        top: $top;
+    }
+    @if $right !=null {
+        right: $right;
+    }
+    @if $bottom !=null {
+        bottom: $bottom;
+    }
+    @if $left !=null {
+        left: $left;
+    }
+} //@mixin absolute
+
+@mixin center($m:null, $mt:null, $mb:null) {
+    @if $m==null and $mt==null and $mb==null {
+        // 横以外のmarginがいらない場合
+        margin: 0 auto;
+    }
+    @else if $m !=null {
+        // 上下のmarginが共通の場合
+        margin: $m auto;
+    }
+    @else if $mt==null and $mb !=null {
+        // 下のみmarginが必要な場合
+        margin: 0 auto $mb;
+    }
+    @else if $mb==null {
+        // 上のみmarginが必要な場合
+        margin: $mt auto 0;
+    }
+    @else {
+        margin: $mt auto $mb;
+    }
+} // @mixin center
