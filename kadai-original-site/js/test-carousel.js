@@ -1,6 +1,6 @@
 $(document).ready(function(){
   //header
-      $(".humb").click(function () {
+      $(".hum_icon").click(function () {
       $(this).next().slideToggle();
     });
   

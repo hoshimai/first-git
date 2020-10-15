@@ -16,23 +16,46 @@ header {
     // @include widthm($pc: 100 ,$sp: 100 ,$mautoSp: 1, $mautoPc: 1);
     
     .container {
+        width: 100%;
+        height: 100%;
+        max-width: none;
         .row {
+            height: 100%;
             .columns {
                 // float: none;
             }
             .logo {
+                height: 100%;
+                margin: 0;
+                padding-left: 10px;
                 .logo_top {
                     img {
-                        height: 130px;
+                        width: 80%;
+                        padding-left: 10px;
+                        max-width: 180px;
                     }
                 }
             }
             
             .navi {
+                height: 100%;
+                margin: 0;
                 // position: relative;
                 .pc_navi{
                     @include absolute($bottom:0, $right:0);
                     width: 80%;
+                    height: 100%;
+                    .hum_icon {
+                        // text-align: end;
+                        position: fixed;
+                        right: 0%;
+                        z-index: 100;
+                        img {
+                            width: 70%;
+                            margin: 0 20px 20px 20px;
+                            max-width: 70px
+                        }
+                    }
                     .humb {
                         color: rgba(201,23,30,0.8);
                         border: 2px solid rgba(201,23,30,0.8);
@@ -48,23 +71,60 @@ header {
                         transition: 0.25s;
                     }
                     .pn_ul {
+                        @include widthm($pc: 40 ,$sp: 15 ,$mautoSp: 1);
                         display: none;
-                        width: 20%;
+                        height: 100vh;
+                        width: 40%;
                         float: right;
                         position: fixed;
+                        top: 0rem;
                         right: 9rem;
                         z-index: 100;
-                        border: 1px solid #fff;
-                        background-color: black;
+                        margin-right: 10px;
+                        border: 5px groove $ac_color;
+                        background-color: rgba(201,23,30,0.8);
+                        
                         .pn_li {
+                            position: relative;
+                            display: block;
+                            // background: rgba(201,23,30,0.8) no-repeat center center;
+                            // border: 1px solid $p_color_l;
+                            font-weight: bold;
+                            padding: 0;
                             @include widthm($pc: 100 ,$sp: 15 ,$mautoSp: 1, $mautoPc: 1);
                             @include fontsize(16);
-                            padding-bottom:20px;
-                            height: 33px;
+                            height: 17%;
                             list-style: none;
-                            border-radius: 0;
+                            a {
+                                position: absolute;
+                                @include widthm($pc: 100 ,$sp: 15 ,$mautoSp: 1, $mautoPc: 1);
+                                height: 100%;
+                                // color: $ac_color;
+                                // display: inline-block;
+                                padding: 0;
+                                img {
+                                    width: 27%;
+                                    max-width: 120px;
+                                    transform: rotate(0deg);
+                                    margin: 2.5rem 0 0 1rem;
+                                }
+                            }
                         }
-                    }   
+                        .pn_li:hover {
+                            position: relative;
+                            a {
+                                position: absolute;
+                                background: darken(rgba(201,23,30,0.8),20%) url(../images/icon_150610_257_10.png) center center / 40% auto repeat;
+                                    // url(../images/icon_150610_257_10.png) center center / 40% auto no-repeat;
+                                transition: 0.5s;
+                                @include widthm($pc: 100 ,$sp: 15 ,$mautoSp: 1, $mautoPc: 1);
+                                img {
+                                    transform: rotate(30deg);
+                                    transition: 0.5s;
+                                }
+                            }
+                        }
+                    }  
                 }
             }
         }//row
@@ -72,11 +132,15 @@ header {
 }//header
 
 #carcouel {
-    height: 350px;
-    padding-top: 30px;
+    // padding-top: 30px;
     .container {
+        width: 100%;
+        height: 500px;
+        max-width: 1500px;
+        margin: auto;
         .row {
             .carousel {
+                margin-bottom: 40px;
                 .owl-theme {
                     .owl-dots {
                         margin-top: 0px;
@@ -101,10 +165,11 @@ header {
                 } //.owl-theme 
                 
                 .car {
-                    height: 330px;
+                    // height: 500px;
                     // width: 834px;
                     width: 100%;
                     background-color: $bc_color;
+                    position: relative;
                     .car_t {
                         @include widthm($pc: 50 ,$sp: 50 );
                         margin: auto;
@@ -128,28 +193,28 @@ header {
                         height: 300px;
                     }
                     .car1_t {
-                        background: url("../images/Top/What is Japanese Ramen.png") no-repeat 33% 10%;
+                        background: url("../images/top/What is Japanese Ramen.png") no-repeat 33% 10%;
                         p {
                             @include absolute($top:35%, $left:5%);
                         }
                     }
                     .car1_p {
-                        background: url("../images/Top/top-4.png") no-repeat center center;
+                        background: url("../images/top/top-4.png") no-repeat center center;
                         background-size: 90% auto;
                     }
                     .car2_t {
-                        background: url("../images/Top/Communication created by Ramen.png") no-repeat 20% 8%;
+                        background: url("../images/top/Communication created by Ramen.png") no-repeat 20% 8%;
                         p {
                             padding-top: 80px;
                             padding-left: 20px;
                         }
                     }
                     .car2_p {
-                        background: url("../images/Top/top-1.png") no-repeat center center;
+                        background: url("../images/top/top-1.png") no-repeat center center;
                         background-size: 90% auto;
                     }
                     .btn_car {
-                        @include absolute($bottom:9%, $right:4%);
+                        @include absolute($bottom:6%, $right:4%);
                         @include fontsize(20);
                         height: 115px;
                         width: 115px;
@@ -157,13 +222,14 @@ header {
                         color: $ac_color;
                         text-decoration-line: none;
                         border-radius: 50%;
-                        border: 1px solid $p_color_l;
+                        border: 3px solid $ac_color;
+                        // border: 6px inset $bc_color_2;
                         a {
                             padding: 35px;
                         }
                     }
                     .car3_t {
-                        background: url("../images/Top/A solemn time to face food.png") no-repeat 00% 8%;
+                        background: url("../images/top/A solemn time to face food.png") no-repeat 0% 8%;
                         p {
                             padding-top: 85px;
                             padding-left: 40px;
@@ -171,7 +237,7 @@ header {
                         }
                     }
                     .car3_p {
-                        background: url("../images/Top/top-2.png") no-repeat center center;
+                        background: url("../images/top/top-2.png") no-repeat center center;
                         background-size: 60% auto;
                     }
                 }//car
@@ -182,37 +248,43 @@ header {
 
 #cover {
     .container {
+        width: 85%;
+        max-width: 1200px;
         .row {
             .cover {
                 margin: 0 auto;
                 margin-top: 30px;
                 content: "";
                 display: inline-block;
-                height: 220px;
-                background: url("../images/cover.jpg") no-repeat center center;
+                height: 400px;
+                background: url("../images/cover_l.png") no-repeat center center;
                 background-size: 100% auto;
                 .clogo {
                     @include widthm($pc: 100,$sp: 30);
                     margin: auto;
                     content: "";
                     display: inline-block;
-                    height: 220px;
+                    height: 400px;
                 }//clogo
                 .about {
-                    background: url("../images/About/About Fuga.png") no-repeat center center;
-                    background-size: 45% auto;
+                    background: url("../images/about/about_fuga.png") no-repeat center center / 55% auto,
+                        url("../images/about/about_fuga_d.png") no-repeat 47% 54% / 55% auto;
+                }//about
+                .menu {
+                    background: url("../images/menu/menu.png") no-repeat center center / 55% auto,
+                        url("../images/menu/menu_d.png") no-repeat 47% 54% / 55% auto;
                 }//about
                 .news {
-                    background: url("../images/News/News Release.png") no-repeat center center;
-                    background-size: 45% auto;
+                    background: url("../images/news/news_release.png") no-repeat center center / 55% auto,
+                        url("../images/news/news_release_d.png") no-repeat 47% 54% / 55% auto;
                 }//news
                 .r-c {
-                    background: url("../images/R&C/Reservation&Contact.png") no-repeat center center;
-                    background-size: 45% auto;
+                    background: url("../images/r_c/reservation_contact.png") no-repeat center center / 55% auto,
+                        url("../images/r_c/reservation_contact_d.png") no-repeat 47% 54% / 55% auto;
                 }//r-c
                 .shop {
-                    background: url("../images/Shop/Shop Information.png") no-repeat center center;
-                    background-size: 45% auto;
+                    background: url("../images/shop/shop_information.png") no-repeat center center / 55% auto,
+                        url("../images/shop/shop_information_d.png") no-repeat 47% 54% / 55% auto;
                 }
             }//cover
         }//row
@@ -221,43 +293,64 @@ header {
 
 #style {
     .container {
+        width: 85%;
+        max-width: 1200px;
         .row {
             .style {
-                height: 350px;
+                height: 400px;
                 margin-top: 30px;
-                background-color: $bc_color;
+                background-color: $bc_color_2;
+                border: 6px inset $bc_color_2;
                 
                 .style-logo {
                     @include widthm($pc: 100 ,$sp: 100 ,$mautoSp: 1, $mautoPc: 1);
                     content: "";
                     display: inline-block;
-                    height: 260px;
-                    background: url("../images/Top/Menya Fuga's Style.png") no-repeat center 23%;
-                    background-size: 40% auto;
+                    height: 400px;
+                    // background: url("../images/top/Menya Fuga's Style.png") no-repeat center 23%;
+                    background: url("../images/top/Menya Fuga's Style.png") center 20% / 40% auto no-repeat,
+                        url(../images/icon_150610_257_10.png) no-repeat,
+                        url(../images/icon_150610_257_10.png) right bottom no-repeat;
+                    // background-size: 40% auto;
                     p {
                         color: $p_color_l;
                         text-align: center;
-                        display: inline-block;
-                        @include absolute($top:42%, $left:25%);
-                        @include fontsize(16);
+                        margin-top: 150px;
+                        // display: inline-block;
+                        // @include absolute($top:42%, $left:25%);
+                        @include fontsize(20);
                         line-height: 30px;
                     }  
-                    .style-logo-p {
-                        position: static;
-                        width: 100%;
-                        background-color: $bc_color;
-                        margin-top: 90px;
-                        padding: 40px;
-                         @include fontsize(16);
-                    }
-                }
-                .style-logo-a {
-                    background-position: center 10%;
                 }
             }//style
             .style-a {
                 height: 350px;
                 background-color: transparent;
+                height: 400px;
+                margin-top: 30px;
+                .style-logo-a {
+                    @include widthm($pc: 100 ,$sp: 100 ,$mautoSp: 1, $mautoPc: 1);
+                    content: "";
+                    display: inline-block;
+                    height: 400px;
+                    background: url("../images/top/Menya Fuga's Style.png") center 10% / 40% auto no-repeat;
+                    .style-logo-p {
+                        background: url(../images/icon_150610_257_10.png) left top / 15% auto no-repeat,
+                            url(../images/icon_150610_257_10.png) left 17.5% top / 10% auto no-repeat,
+                            url(../images/icon_150610_257_10.png) right bottom / 15% auto no-repeat,
+                            url(../images/icon_150610_257_10.png) right 17.5% bottom / 10% auto no-repeat;
+                        color: $p_color_l;
+                        border: 6px inset $bc_color_2;
+                        text-align: center;
+                        @include fontsize(18);
+                        line-height: 30px;
+                        position: static;
+                        width: 100%;
+                        background-color: $bc_color_3;
+                        margin-top: 120px;
+                        padding: 40px;
+                    }
+                }
             }
         }//row
     }//container
@@ -265,32 +358,37 @@ header {
 
 #news-menu {
     .container {
+        width: 85%;
+        max-width: 1200px;
         margin-top: 30px;
         .row {
             .news-t {
-                height: 340px;
-                background-color: $bc_color;
+                height: 400px;
+                background-color: $bc_color_3;
                 position: relative;
+                border: 6px inset $bc_color_2;
                 .nt-logo {
                     @include widthm($pc: 100 ,$sp: 100 ,$mautoSp: 1, $mautoPc: 1);
-                    @include absolute($top:8%, $left:3%);
+                    // @include absolute($top:8%, $left:3%);
                     content: "";
                     display: inline-block;
-                    height: 60px;
-                    background: url("../images/Top/News_logo.png") no-repeat center 10%;
-                    background-size: 70% auto;
+                    height: 100%;
+                    background: url("../images/top/news_logo.png") no-repeat center 10% / auto,
+                        url(../images/icon_150610_257_25.png) top left / 30% no-repeat,
+                        url(../images/icon_150610_257_25.png) right bottom / 35% no-repeat;
+                    // background-size: 70% auto;
                 }
                 ul {
-                    // @include absolute($top:23%, $left:7%);
+                    @include absolute($top:110px, $left:7%);
                     width: 87%;
                     margin: 0 auto;
-                    padding-top: 75px;
+                    // padding-top: 75px;
                     li {
                         list-style: none;
                         color: $p_color_l;
                         text-align: left;
                         display: inline-block;
-                        @include fontsize(14);
+                        @include fontsize(16);
                         line-height: 25px;
                         padding-top: 5px;
                         padding-bottom: 0;
@@ -304,8 +402,11 @@ header {
                 }//ul
                 .next-back-btn {
                     text-align: center;
-                    @include widthm($pc: 80, $sp: 95, $mautoSp: 1);
+                    @include widthm($pc: 100, $sp: 95, $mautoSp: 1);
                     margin-top: 20px;
+                    position: absolute;
+                    top: 290px;
+                    left: 0;
                     .totop {
                         text-align: center;
                         margin: 0 auto;
@@ -316,37 +417,40 @@ header {
                 }
             }//news-t
             .smenu-t {
-                height: 340px;
-                background-color: $bc_color;
+                min-height: 400px;
+                background-color: $bc_color_3;
                 position: relative;
+                border: 6px inset $bc_color_2;
                 .sm-logo {
                     @include widthm($pc: 100 ,$sp: 100 ,$mautoSp: 1, $mautoPc: 1);
-                    @include absolute($top:8%, $left:3%);
+                    position: absolute;
                     content: "";
                     display: inline-block;
-                    height: 60px;
-                    background: url("../images/Top/Seasonal Menu.png") no-repeat center 10%;
-                    background-size: 70% auto;
+                    height: 400px;
+                    background: url("../images/top/seasonal_menu.png") no-repeat center 10% / auto,
+                        url(../images/icon_150610_257_25.png) top left / 30% no-repeat,
+                        url(../images/icon_150610_257_25.png) right bottom / 35% no-repeat;
                 }
                 .sm-ul {
                     .sm-pic {
                         width: 50%;
-                        background-color: $bc_color;
-                        margin-top: 85px;
+                        background-color: transparent;
+                        margin-top: 115px;
+                        padding: 0;
                         .s-fig {
                             @include widthm($pc: 100 ,$sp: 100 ,$mautoSp: 1, $mautoPc: 1);
                             content: "";
                             display: inline-block;
-                            height: 110px;
+                            height: 140px;
                         }
                         .s-fig-t {
                             p {
-                                @include fontsize(15);
+                                @include fontsize(18);
                                 color: $p_color_l;
                                 text-align: center;
                                 margin: 0;
                                 font-weight: bold;
-                                line-height: 35px;
+                                line-height: 30px;
                             }
                         }
                         .s-fig-1 {
@@ -361,8 +465,10 @@ header {
                 }
                 .next-back-btn {
                     text-align: center;
-                    @include widthm($pc: 80, $sp: 95, $mautoSp: 1);
-                    margin-top: 5px;
+                    @include widthm($pc: 100, $sp: 95, $mautoSp: 1);
+                    margin-top: 16.5px;
+                    position: relative;
+                    z-index: 10;
                     .totop {
                         text-align: center;
                         margin: 0 auto;
@@ -378,20 +484,21 @@ header {
 
 #history {
     .container {
+        width: 85%;
+        max-width: 1200px;
         .row {
             .history {
                 .h-logo {
-                    background: url("../images/About/History.png") no-repeat center center;
-                    background-size: 40% auto;
+                    background: url("../images/about/History.png") no-repeat center center / 40% auto;
                 }
                 .h-con {
                     height: 360px;
-                    background: $bc_color url("../images/About/fig.png") no-repeat center center;
-                    background-size: auto;
+                    border: 6px inset $bc_color_2;
+                    background: $bc_color_2 url("../images/about/fig.png") no-repeat center center / auto;
                     line-height: 54px;
                     p {
-                        color: $p_color_d;
-                        @include fontsize(16);
+                        color: $p_color_l;
+                        @include fontsize(17);
                         // margin: 0;
                         // text-indent: -7.5em;
                         // padding-left: 105px;
@@ -426,8 +533,11 @@ header {
 
 #Founder {
     .container {
+        width: 85%;
+        max-width: 1200px;
+        
         .f-logo {
-            background: url("../images/About/Founder.png") no-repeat center center;
+            background: url("../images/about/Founder.png") no-repeat center center;
             background-size: 40% auto;
         }
         .row {
@@ -435,8 +545,8 @@ header {
                 .f-pic-i {
                     content: "";
                     display: inline-block;
-                    height: 320px;
-                    background: $bc_color url("../images/About/tentyo-1.2.png") no-repeat center center;
+                    height: 340px;
+                    background: url("../images/about/tentyo-1.2.png") no-repeat center center;
                     background-size: 80% auto;
                     @include widthm($pc: 100 ,$sp: 100 );
                     margin: auto;
@@ -445,9 +555,12 @@ header {
             }
             .f-text {
                 color: $p_color_l;
-                background: $bc_color;
-                @include fontsize(16);
-                height: 320px;
+                margin-left: 0%;
+                background: 
+                     url(../images/icon_150610_257_25.png) top left / 30% no-repeat,
+                     url(../images/icon_150610_257_25.png) right bottom / 38% no-repeat;
+                @include fontsize(18);
+                height: 340px;
                 p {
                     width: 80%;
                     height: 90%;
@@ -455,10 +568,10 @@ header {
                     line-height: 30px;
                 }
                 .tentyo {
-                    @include fontsize(18);
+                    @include fontsize(20);
                     font-weight: bold;
                     height: 15%;
-                    margin-top: 30px;
+                    margin-top: 10%;
                 }
             }
         }//row
@@ -466,15 +579,20 @@ header {
 }//Founder  
 
 #news-contents {
+    margin-top: 30px;
     .container {
+        width: 85%;
+        max-width: 1200px;
+        background: $bc_color;
         .row {
             .news-cont {
                 color: $p_color_l;
-                background: $bc_color;
-                @include fontsize(16);
+                @include fontsize(18);
                 // height: 320px;
-                margin-top: 30px;
                 padding: 60px;
+                border: 6px inset $bc_color_2;
+                background: url(../images/icon_150610_257_25.png) no-repeat,
+                        url(../images/icon_150610_257_25.png) right bottom no-repeat;
                 .title {
                     padding: 10px 0;
                 }
@@ -485,7 +603,7 @@ header {
                     display: none;
                     .article {
                         padding: 10px 0 10px 130px;
-                        @include fontsize(14);
+                        @include fontsize(16);
                     }
                     .border_b {
                         content: '';
@@ -503,34 +621,39 @@ header {
 
 #season-menu {
     .container {
+        width: 85%;
+        max-width: 1200px;
         .row {
             .season-menu {
-                height: 470px;
+                height: 520px;
                 .s-logo {
-                    background: url("../images/Menu/Seasonal Menu.png") no-repeat center center;
+                    background: url("../images/menu/seasonal_menu.png") no-repeat center center;
                     background-size: 40% auto;
                 }
                 .sm-ul {
+                    background-color: $bc_color_2;
+                    border: 6px inset $bc_color_2;
                     .sm-pic {
                         width: 50%;
-                        background-color: $bc_color;
                         padding: 30px;
                         height: 361px;
+                        background: url(../images/icon_150610_257_25.png) left top / 30% auto no-repeat,
+                        url(../images/icon_150610_257_25.png) right bottom / 30% auto no-repeat;
                         .s-fig {
                             @include widthm($pc: 100 ,$sp: 100 ,$mautoSp: 1, $mautoPc: 1);
                             content: "";
                             display: inline-block;
-                            height: 200px;
+                            height: 220px;
                         }
                         .s-fig-t {
                             p {
-                                @include fontsize(13);
+                                @include fontsize(15);
                                 color: $p_color_l;
                                 text-align: center;
                                 margin: 0;
                                 line-height: 20px;
                                 span {
-                                    @include fontsize(15);
+                                    @include fontsize(17);
                                     color: $p_color_l;
                                     font-weight: bold;
                                     line-height: 35px;
@@ -554,19 +677,22 @@ header {
 
 #grand-drink {
     .container {
+        width: 85%;
+        max-width: 1200px;
         .row {
             .grand {
                 .g-logo {
-                    background: url("../images/Menu/Grand Menu.png") no-repeat center center;
+                    background: url("../images/menu/grand_menu.png") no-repeat center center;
                     background-size: 100% auto;
                 }
                 .g-menu {
                     height: 660px;
-                    background-color: $bc_color;
+                    background-color: $bc_color_3;
+                    border: 6px inset $bc_color_2;
                     padding: 30px 0;
                     .g-menu-f {
                         @include widthm($pc: 50 ,$sp: 50 );
-                        background-color: $bc_color;
+                        background-color: transparent;
                         height: 100%;
                         p {
                             // height: 170px;
@@ -578,54 +704,55 @@ header {
                             font-weight: bold;
                         }
                         .tsr {
-                            background:$bc_color url("../images/Menu/grand-1.png") no-repeat center center;
+                            background:transparent url("../images/menu/grand-1.png") no-repeat center center;
                             background-size: auto 100%;
                             height: 130px;
                         }
                         .csr {
-                            background:$bc_color url("../images/Menu/grand-2.png") no-repeat center center;
+                            background:transparent url("../images/menu/grand-2.png") no-repeat center center;
                             background-size: auto 90%;
                             height: 130px;
                         }
                         .vgr {
-                            background:$bc_color url("../images/Menu/grand-3.png") no-repeat center center;
+                            background:transparent url("../images/menu/grand-3.png") no-repeat center center;
                             background-size: auto 100%;
                             height: 130px;
                         }
                     }
                     .g-menu-t {
                         @include widthm($pc: 50 ,$sp: 50 );
-                        background:$bc_color url("../images/Menu/grand-menus.png") no-repeat center center;
-                        background-size: 95% auto;
+                        background:transparent url("../images/menu/grand-menus.png") no-repeat center center;
+                        background-size: 25rem auto;
                         height: 100%;
                     }
                 }
             }//grand
             .drink {
                 .d-logo {
-                    background: url("../images/Menu/Drink.png") no-repeat center center;
+                    background: url("../images/menu/Drink.png") no-repeat center center;
                     background-size: 100% auto;                    
                 }
                 .d-menu {
                     height: 410px;
-                    background-color: $bc_color;
+                    background-color: $bc_color_3;
+                    border: 6px inset $bc_color_2;
                     padding: 30px 0;
                     .d-menu-f {
                         @include widthm($pc: 50 ,$sp: 50 );
-                        background:$bc_color url("../images/Menu/BeerTeaWaterSparkring WaterOrange JuiceCoca Cola.png") no-repeat center center;
-                        background-size: 95% auto;
+                        background:transparent url("../images/menu/BeerTeaWaterSparkring WaterOrange JuiceCoca Cola.png") no-repeat center center;
+                        background-size: 23rem auto;
                         height: 100%;
                     }
                     .d-menu-t {
                         @include widthm($pc: 50 ,$sp: 50 );
-                        background:$bc_color url("../images/Menu/beer1.png") no-repeat -90% 80%;
+                        background:transparent url("../images/menu/beer1.png") no-repeat -90% 80%;
                         background-size: 95% auto;
                         height: 100%;
                     }
                 }
                 .gyo-za {
                     @include widthm($pc: 100 ,$sp: 100 );
-                    background: url("../images/Menu/gyo-za.jpg") no-repeat center center;
+                    background: url("../images/menu/gyo-za.jpg") no-repeat center center;
                     background-size: 80% auto;
                     height: 200px;
                     margin-top: 30px;
@@ -637,25 +764,30 @@ header {
 
 #reservation, #contact {
     .container {
+        width: 85%;
+        max-width: 1200px;
         .row {
             .reservation, .contact {
                 .r-logo {
-                    background: url("../images/R&C/Reservation.png") no-repeat center center;
+                    background: url("../images/r_c/Reservation.png") no-repeat center center;
                     background-size: 45% auto; 
                 }
                 .c-logo {
-                    background: url("../images/R&C/Contact.png") no-repeat center center;
+                    background: url("../images/r_c/Contact.png") no-repeat center center;
                     background-size: 45% auto; 
                 }
                 .r-con, .c-con {
-                    height: 800px;
-                    background-color: $bc_color;
+                    // height: 840px;
+                    background: url(../images/icon_150610_257_25.png) left top / 25% auto no-repeat,
+                        url(../images/icon_150610_257_25.png) right bottom / 30% auto no-repeat;
+                    background-color: $bc_color_3;
+                    border: 6px inset $bc_color_2;
                     padding: 30px 0;
                     .r-form {
                         @include widthm($pc: 80 ,$sp: 100, $mautoSp: 1, $mautoPc: 1);
                         table {
                               border-collapse: collapse;
-                              margin: 0 10px auto;
+                              margin: 0 auto;
                         }
                         .inform {
                             @include fontsize(15);
@@ -696,7 +828,7 @@ header {
                           padding: 20px;
                         }
                         th {
-                            @include fontsize(16);
+                            @include fontsize(18);
                             color: $p_color_l;
                             text-align: left;
                             margin: 0;
@@ -720,7 +852,7 @@ header {
                     }
                 }//r-con, c-con
                 .c-con {
-                    height: 540px;
+                    // height: 540px;
                 }
             }//reservation
         }//row
@@ -729,21 +861,26 @@ header {
 
 #confirmation {
     .container {
+        width: 85%;
+        max-width: 1200px;
         .row {
             .confirmation {
                 .con-logo {
-                    background: url("../images/R&C/Confirmation.png") no-repeat center center;
+                    background: url("../images/r_c/Confirmation.png") no-repeat center center;
                     background-size: 45% auto; 
                 }
                 .r-con, .c-con {
                     height: 800px;
-                    background-color: $bc_color;
+                    background: url(../images/icon_150610_257_25.png) left top / 25% auto no-repeat,
+                        url(../images/icon_150610_257_25.png) right bottom / 30% auto no-repeat;
+                    background-color: $bc_color_3;
+                    border: 6px inset $bc_color_2;
                     padding: 30px 0;
                     .r-form {
                         @include widthm($pc: 80 ,$sp: 100, $mautoSp: 1, $mautoPc: 1);
                         table {
                               border-collapse: collapse;
-                              margin: 0 10px auto;
+                              margin: 0 auto;
                         }
                         .inform {
                             @include fontsize(15);
@@ -819,15 +956,24 @@ header {
 
 #complete {
     .container {
+        width: 85%;
+        max-width: 1200px;
         .row {
             .complete {
                 .con-logo {
-                    background: url("../images/R&C/Confirmation.png") no-repeat center center;
+                    background: url("../images/r_c/Confirmation.png") no-repeat center center;
                     background-size: 45% auto; 
                 }
                 .tk_bt {
                     height: 280px;
-                    background-color: $bc_color;
+                    background: url(../images/icon_150610_257_25.png) left top / 10% auto no-repeat,
+                        url(../images/icon_150610_257_25.png) 11.5% top / 10% auto no-repeat,
+                        url(../images/icon_150610_257_25.png) 23% top / 10% auto no-repeat,
+                        url(../images/icon_150610_257_25.png) right bottom / 10% auto no-repeat,
+                        url(../images/icon_150610_257_25.png) right 11.5% bottom / 10% auto no-repeat,
+                        url(../images/icon_150610_257_25.png) right 23% bottom / 10% auto no-repeat;
+                    background-color: $bc_color_3;
+                    border: 6px inset $bc_color_2;
                     padding: 30px 0;
                     p {
                         color: $ac_color;
@@ -853,15 +999,17 @@ header {
 
 #shops {
     .container {
+        width: 85%;
+        max-width: 1200px;
         .row {
             .shop1 {
                 height: 50%;
                 padding: 30px 0;
                 .s1-logo {
-                    background: url("../images/Shop/Diamond Street.png") no-repeat center center;
+                    background: url("../images/shop/Diamond Street.png") no-repeat center center;
                 }
                 .s1-fig {
-                    background: url("../images/Shop/shop-1.jpg") no-repeat center center;
+                    background: url("../images/shop/shop-1.png") no-repeat center center;
                     background-size: 45% auto; 
                 }
                 .s-b {
@@ -872,10 +1020,10 @@ header {
                 height: 50%;
                 padding: 30px 0;
                 .s2-logo {
-                    background: url("../images/Shop/Forest Street.png") no-repeat center center;
+                    background: url("../images/shop/Forest Street.png") no-repeat center center;
                 }
                 .s2-fig {
-                    background: url("../images/Shop/shop-2.jpg") no-repeat center center;
+                    background: url("../images/shop/shop-2.png") no-repeat center center;
                     background-size: 45% auto; 
                 }
                 .s-b {
@@ -886,10 +1034,10 @@ header {
                 height: 50%;
                 padding: 30px 0;
                 .s3-logo {
-                    background: url("../images/Shop/Silver Road.png") no-repeat center center;
+                    background: url("../images/shop/Silver Road.png") no-repeat center center;
                 }
                 .s3-fig {
-                    background: url("../images/Shop/shop-3.jpg") no-repeat center center;
+                    background: url("../images/shop/shop-3.png") no-repeat center center;
                     background-size: 45% auto; 
                 }
                 .s-b {
@@ -900,10 +1048,10 @@ header {
                 height: 50%;
                 padding: 30px 0;
                 .s4-logo {
-                    background: url("../images/Shop/Sky Blue City.png") no-repeat center center;
+                    background: url("../images/shop/Sky Blue City.png") no-repeat center center;
                 }
                 .s4-fig {
-                    background: url("../images/Shop/shop-4.jpg") no-repeat center center;
+                    background: url("../images/shop/shop-4.png") no-repeat center center;
                     background-size: 45% auto; 
                 }
                 .s-b {
@@ -915,6 +1063,8 @@ header {
 }//shops
 
 footer {
+    width: 100%;
+    // max-width: 1200px;
     span::before {
         content: "";
         display: inline-block;
@@ -936,6 +1086,8 @@ footer {
     }//c_txt
     
     .container {
+        width: 100%;
+        max-width: 1200px;
         .footer-line {
             @include widthm($pc: 100, $sp: 95, $mautoSp: 1);
             height: 1px;
@@ -958,6 +1110,10 @@ footer {
                     height: 100px;
                     li {
                         margin-bottom: 3px;
+                        a {
+                            text-decoration: none;
+                            color: $p_color_d;
+                        }
                     }
                 }
             }//f-menu

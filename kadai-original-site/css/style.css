@@ -54,8 +54,9 @@ body {
 .next-back-btn {
   width: 95%;
   margin: 0 auto;
-  height: 33px;
+  height: 70px;
   padding-bottom: 20px;
+  padding-top: 10px;
   text-align: center; }
   @media (min-width: 550px) {
     .next-back-btn {
@@ -85,7 +86,7 @@ body {
   width: 100%;
   display: inline-block;
   content: "";
-  height: 70px;
+  height: 100px;
   margin: 30px 0 auto; }
   @media (min-width: 550px) {
     .logo {
@@ -159,7 +160,6 @@ body {
 .flex-b-li {
   align-self: flex-start;
   list-style: none;
-  background: white;
   padding: 10px 10px;
   margin: 0 0px 2px 0; }
   .flex-b-li img {
@@ -196,246 +196,331 @@ header {
   height: 140px;
   width: 100%;
   margin-top: 30px; }
-  header .container .row .logo .logo_top img {
-    height: 130px; }
-  header .container .row .navi .pc_navi {
-    display: block;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 80%; }
-    header .container .row .navi .pc_navi .humb {
-      color: rgba(201, 23, 30, 0.8);
-      border: 2px solid rgba(201, 23, 30, 0.8);
-      border-radius: 0.5rem;
-      font-size: 25px;
-      font-size: 2.5rem;
-      padding: 0.5rem 0.5rem 0.4rem 0.4rem;
-      position: fixed;
-      right: 5rem; }
-    header .container .row .navi .pc_navi .humb:hover {
-      color: #fff;
-      border-color: #fff;
-      transition: 0.25s; }
-    header .container .row .navi .pc_navi .pn_ul {
-      display: none;
-      width: 20%;
-      float: right;
-      position: fixed;
-      right: 9rem;
-      z-index: 100;
-      border: 1px solid #fff;
-      background-color: black; }
-      header .container .row .navi .pc_navi .pn_ul .pn_li {
-        width: 15%;
-        margin: 0 auto;
-        font-size: 16px;
-        font-size: 1.6rem;
-        padding-bottom: 20px;
-        height: 33px;
-        list-style: none;
-        border-radius: 0; }
-        @media (min-width: 550px) {
-          header .container .row .navi .pc_navi .pn_ul .pn_li {
-            width: 100%;
-            margin: 0 auto; } }
-
-#carcouel {
-  height: 350px;
-  padding-top: 30px; }
-  #carcouel .container .row .carousel .owl-theme .owl-dots {
-    margin-top: 0px;
-    text-align: center;
-    line-height: 13px; }
-    #carcouel .container .row .carousel .owl-theme .owl-dots .owl-dot {
-      height: 0px; }
-      #carcouel .container .row .carousel .owl-theme .owl-dots .owl-dot span {
-        width: 30px;
-        height: 5px;
-        margin: 5px 7px;
-        background: #707070; }
-    #carcouel .container .row .carousel .owl-theme .owl-dots .owl-dot.active span {
-      background: rgba(201, 23, 30, 0.26); }
-  #carcouel .container .row .carousel .owl-theme .owl-nav {
-    text-align: left; }
-  #carcouel .container .row .carousel .car {
-    height: 330px;
+  header .container {
     width: 100%;
-    background-color: #150B00; }
-    #carcouel .container .row .carousel .car .car_t {
-      width: 50%;
-      margin: auto;
-      content: "";
-      display: inline-block;
-      height: 260px;
-      background-size: 75% auto; }
-      @media (min-width: 550px) {
-        #carcouel .container .row .carousel .car .car_t {
-          width: 50%; } }
-      #carcouel .container .row .carousel .car .car_t p {
-        color: #D5D3D3;
-        text-align: left;
-        display: inline-block;
-        font-size: 14px;
-        font-size: 1.4rem;
-        line-height: 28px; }
-    #carcouel .container .row .carousel .car .car_p {
-      width: 50%;
-      margin: auto;
-      content: "";
-      display: inline-block;
-      height: 300px; }
-      @media (min-width: 550px) {
-        #carcouel .container .row .carousel .car .car_p {
-          width: 50%; } }
-    #carcouel .container .row .carousel .car .car1_t {
-      background: url("../images/Top/What is Japanese Ramen.png") no-repeat 33% 10%; }
-      #carcouel .container .row .carousel .car .car1_t p {
-        display: block;
-        position: absolute;
-        top: 35%;
-        left: 5%; }
-    #carcouel .container .row .carousel .car .car1_p {
-      background: url("../images/Top/top-4.png") no-repeat center center;
-      background-size: 90% auto; }
-    #carcouel .container .row .carousel .car .car2_t {
-      background: url("../images/Top/Communication created by Ramen.png") no-repeat 20% 8%; }
-      #carcouel .container .row .carousel .car .car2_t p {
-        padding-top: 80px;
-        padding-left: 20px; }
-    #carcouel .container .row .carousel .car .car2_p {
-      background: url("../images/Top/top-1.png") no-repeat center center;
-      background-size: 90% auto; }
-    #carcouel .container .row .carousel .car .btn_car {
-      display: block;
-      position: absolute;
-      right: 4%;
-      bottom: 9%;
-      font-size: 20px;
-      font-size: 2rem;
-      height: 115px;
-      width: 115px;
-      list-style: none;
-      color: #999411;
-      text-decoration-line: none;
-      border-radius: 50%;
-      border: 1px solid #D5D3D3; }
-      #carcouel .container .row .carousel .car .btn_car a {
-        padding: 35px; }
-    #carcouel .container .row .carousel .car .car3_t {
-      background: url("../images/Top/A solemn time to face food.png") no-repeat 0% 8%; }
-      #carcouel .container .row .carousel .car .car3_t p {
-        padding-top: 85px;
-        padding-left: 40px;
-        text-align: center; }
-    #carcouel .container .row .carousel .car .car3_p {
-      background: url("../images/Top/top-2.png") no-repeat center center;
-      background-size: 60% auto; }
+    height: 100%;
+    max-width: none; }
+    header .container .row {
+      height: 100%; }
+      header .container .row .logo {
+        height: 100%;
+        margin: 0;
+        padding-left: 10px; }
+        header .container .row .logo .logo_top img {
+          width: 80%;
+          padding-left: 10px;
+          max-width: 180px; }
+      header .container .row .navi {
+        height: 100%;
+        margin: 0; }
+        header .container .row .navi .pc_navi {
+          display: block;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 80%;
+          height: 100%; }
+          header .container .row .navi .pc_navi .hum_icon {
+            position: fixed;
+            right: 0%;
+            z-index: 100; }
+            header .container .row .navi .pc_navi .hum_icon img {
+              width: 70%;
+              margin: 0 20px 20px 20px;
+              max-width: 70px; }
+          header .container .row .navi .pc_navi .humb {
+            color: rgba(201, 23, 30, 0.8);
+            border: 2px solid rgba(201, 23, 30, 0.8);
+            border-radius: 0.5rem;
+            font-size: 25px;
+            font-size: 2.5rem;
+            padding: 0.5rem 0.5rem 0.4rem 0.4rem;
+            position: fixed;
+            right: 5rem; }
+          header .container .row .navi .pc_navi .humb:hover {
+            color: #fff;
+            border-color: #fff;
+            transition: 0.25s; }
+          header .container .row .navi .pc_navi .pn_ul {
+            width: 15%;
+            margin: 0 auto;
+            display: none;
+            height: 100vh;
+            width: 40%;
+            float: right;
+            position: fixed;
+            top: 0rem;
+            right: 9rem;
+            z-index: 100;
+            margin-right: 10px;
+            border: 5px groove #999411;
+            background-color: rgba(201, 23, 30, 0.8); }
+            @media (min-width: 550px) {
+              header .container .row .navi .pc_navi .pn_ul {
+                width: 40%; } }
+            header .container .row .navi .pc_navi .pn_ul .pn_li {
+              position: relative;
+              display: block;
+              font-weight: bold;
+              padding: 0;
+              width: 15%;
+              margin: 0 auto;
+              font-size: 16px;
+              font-size: 1.6rem;
+              height: 17%;
+              list-style: none; }
+              @media (min-width: 550px) {
+                header .container .row .navi .pc_navi .pn_ul .pn_li {
+                  width: 100%;
+                  margin: 0 auto; } }
+              header .container .row .navi .pc_navi .pn_ul .pn_li a {
+                position: absolute;
+                width: 15%;
+                margin: 0 auto;
+                height: 100%;
+                padding: 0; }
+                @media (min-width: 550px) {
+                  header .container .row .navi .pc_navi .pn_ul .pn_li a {
+                    width: 100%;
+                    margin: 0 auto; } }
+                header .container .row .navi .pc_navi .pn_ul .pn_li a img {
+                  width: 27%;
+                  max-width: 120px;
+                  transform: rotate(0deg);
+                  margin: 2.5rem 0 0 1rem; }
+            header .container .row .navi .pc_navi .pn_ul .pn_li:hover {
+              position: relative; }
+              header .container .row .navi .pc_navi .pn_ul .pn_li:hover a {
+                position: absolute;
+                background: rgba(109, 13, 16, 0.8) url(../images/icon_150610_257_10.png) center center/40% auto repeat;
+                transition: 0.5s;
+                width: 15%;
+                margin: 0 auto; }
+                @media (min-width: 550px) {
+                  header .container .row .navi .pc_navi .pn_ul .pn_li:hover a {
+                    width: 100%;
+                    margin: 0 auto; } }
+                header .container .row .navi .pc_navi .pn_ul .pn_li:hover a img {
+                  transform: rotate(30deg);
+                  transition: 0.5s; }
 
-#cover .container .row .cover {
-  margin: 0 auto;
-  margin-top: 30px;
-  content: "";
-  display: inline-block;
-  height: 220px;
-  background: url("../images/cover.jpg") no-repeat center center;
-  background-size: 100% auto; }
-  #cover .container .row .cover .clogo {
-    width: 30%;
-    margin: auto;
-    content: "";
-    display: inline-block;
-    height: 220px; }
-    @media (min-width: 550px) {
-      #cover .container .row .cover .clogo {
-        width: 100%; } }
-  #cover .container .row .cover .about {
-    background: url("../images/About/About Fuga.png") no-repeat center center;
-    background-size: 45% auto; }
-  #cover .container .row .cover .news {
-    background: url("../images/News/News Release.png") no-repeat center center;
-    background-size: 45% auto; }
-  #cover .container .row .cover .r-c {
-    background: url("../images/R&C/Reservation&Contact.png") no-repeat center center;
-    background-size: 45% auto; }
-  #cover .container .row .cover .shop {
-    background: url("../images/Shop/Shop Information.png") no-repeat center center;
-    background-size: 45% auto; }
-
-#style .container .row .style {
-  height: 350px;
-  margin-top: 30px;
-  background-color: #150B00; }
-  #style .container .row .style .style-logo {
-    width: 100%;
-    margin: 0 auto;
-    content: "";
-    display: inline-block;
-    height: 260px;
-    background: url("../images/Top/Menya Fuga's Style.png") no-repeat center 23%;
-    background-size: 40% auto; }
-    @media (min-width: 550px) {
-      #style .container .row .style .style-logo {
-        width: 100%;
-        margin: 0 auto; } }
-    #style .container .row .style .style-logo p {
-      color: #D5D3D3;
+#carcouel .container {
+  width: 100%;
+  height: 500px;
+  max-width: 1500px;
+  margin: auto; }
+  #carcouel .container .row .carousel {
+    margin-bottom: 40px; }
+    #carcouel .container .row .carousel .owl-theme .owl-dots {
+      margin-top: 0px;
       text-align: center;
-      display: inline-block;
-      display: block;
-      position: absolute;
-      top: 42%;
-      left: 25%;
-      font-size: 16px;
-      font-size: 1.6rem;
-      line-height: 30px; }
-    #style .container .row .style .style-logo .style-logo-p {
-      position: static;
+      line-height: 13px; }
+      #carcouel .container .row .carousel .owl-theme .owl-dots .owl-dot {
+        height: 0px; }
+        #carcouel .container .row .carousel .owl-theme .owl-dots .owl-dot span {
+          width: 30px;
+          height: 5px;
+          margin: 5px 7px;
+          background: #707070; }
+      #carcouel .container .row .carousel .owl-theme .owl-dots .owl-dot.active span {
+        background: rgba(201, 23, 30, 0.26); }
+    #carcouel .container .row .carousel .owl-theme .owl-nav {
+      text-align: left; }
+    #carcouel .container .row .carousel .car {
       width: 100%;
       background-color: #150B00;
-      margin-top: 90px;
-      padding: 40px;
-      font-size: 16px;
-      font-size: 1.6rem; }
-  #style .container .row .style .style-logo-a {
-    background-position: center 10%; }
-#style .container .row .style-a {
-  height: 350px;
-  background-color: transparent; }
+      position: relative; }
+      #carcouel .container .row .carousel .car .car_t {
+        width: 50%;
+        margin: auto;
+        content: "";
+        display: inline-block;
+        height: 260px;
+        background-size: 75% auto; }
+        @media (min-width: 550px) {
+          #carcouel .container .row .carousel .car .car_t {
+            width: 50%; } }
+        #carcouel .container .row .carousel .car .car_t p {
+          color: #D5D3D3;
+          text-align: left;
+          display: inline-block;
+          font-size: 14px;
+          font-size: 1.4rem;
+          line-height: 28px; }
+      #carcouel .container .row .carousel .car .car_p {
+        width: 50%;
+        margin: auto;
+        content: "";
+        display: inline-block;
+        height: 300px; }
+        @media (min-width: 550px) {
+          #carcouel .container .row .carousel .car .car_p {
+            width: 50%; } }
+      #carcouel .container .row .carousel .car .car1_t {
+        background: url("../images/top/What is Japanese Ramen.png") no-repeat 33% 10%; }
+        #carcouel .container .row .carousel .car .car1_t p {
+          display: block;
+          position: absolute;
+          top: 35%;
+          left: 5%; }
+      #carcouel .container .row .carousel .car .car1_p {
+        background: url("../images/top/top-4.png") no-repeat center center;
+        background-size: 90% auto; }
+      #carcouel .container .row .carousel .car .car2_t {
+        background: url("../images/top/Communication created by Ramen.png") no-repeat 20% 8%; }
+        #carcouel .container .row .carousel .car .car2_t p {
+          padding-top: 80px;
+          padding-left: 20px; }
+      #carcouel .container .row .carousel .car .car2_p {
+        background: url("../images/top/top-1.png") no-repeat center center;
+        background-size: 90% auto; }
+      #carcouel .container .row .carousel .car .btn_car {
+        display: block;
+        position: absolute;
+        right: 4%;
+        bottom: 6%;
+        font-size: 20px;
+        font-size: 2rem;
+        height: 115px;
+        width: 115px;
+        list-style: none;
+        color: #999411;
+        text-decoration-line: none;
+        border-radius: 50%;
+        border: 3px solid #999411; }
+        #carcouel .container .row .carousel .car .btn_car a {
+          padding: 35px; }
+      #carcouel .container .row .carousel .car .car3_t {
+        background: url("../images/top/A solemn time to face food.png") no-repeat 0% 8%; }
+        #carcouel .container .row .carousel .car .car3_t p {
+          padding-top: 85px;
+          padding-left: 40px;
+          text-align: center; }
+      #carcouel .container .row .carousel .car .car3_p {
+        background: url("../images/top/top-2.png") no-repeat center center;
+        background-size: 60% auto; }
+
+#cover .container {
+  width: 85%;
+  max-width: 1200px; }
+  #cover .container .row .cover {
+    margin: 0 auto;
+    margin-top: 30px;
+    content: "";
+    display: inline-block;
+    height: 400px;
+    background: url("../images/cover_l.png") no-repeat center center;
+    background-size: 100% auto; }
+    #cover .container .row .cover .clogo {
+      width: 30%;
+      margin: auto;
+      content: "";
+      display: inline-block;
+      height: 400px; }
+      @media (min-width: 550px) {
+        #cover .container .row .cover .clogo {
+          width: 100%; } }
+    #cover .container .row .cover .about {
+      background: url("../images/about/about_fuga.png") no-repeat center center/55% auto, url("../images/about/about_fuga_d.png") no-repeat 47% 54%/55% auto; }
+    #cover .container .row .cover .menu {
+      background: url("../images/menu/menu.png") no-repeat center center/55% auto, url("../images/menu/menu_d.png") no-repeat 47% 54%/55% auto; }
+    #cover .container .row .cover .news {
+      background: url("../images/news/news_release.png") no-repeat center center/55% auto, url("../images/news/news_release_d.png") no-repeat 47% 54%/55% auto; }
+    #cover .container .row .cover .r-c {
+      background: url("../images/r_c/reservation_contact.png") no-repeat center center/55% auto, url("../images/r_c/reservation_contact_d.png") no-repeat 47% 54%/55% auto; }
+    #cover .container .row .cover .shop {
+      background: url("../images/shop/shop_information.png") no-repeat center center/55% auto, url("../images/shop/shop_information_d.png") no-repeat 47% 54%/55% auto; }
+
+#style .container {
+  width: 85%;
+  max-width: 1200px; }
+  #style .container .row .style {
+    height: 400px;
+    margin-top: 30px;
+    background-color: rgba(252, 219, 4, 0.25);
+    border: 6px inset rgba(252, 219, 4, 0.25); }
+    #style .container .row .style .style-logo {
+      width: 100%;
+      margin: 0 auto;
+      content: "";
+      display: inline-block;
+      height: 400px;
+      background: url("../images/top/Menya Fuga's Style.png") center 20%/40% auto no-repeat, url(../images/icon_150610_257_10.png) no-repeat, url(../images/icon_150610_257_10.png) right bottom no-repeat; }
+      @media (min-width: 550px) {
+        #style .container .row .style .style-logo {
+          width: 100%;
+          margin: 0 auto; } }
+      #style .container .row .style .style-logo p {
+        color: #D5D3D3;
+        text-align: center;
+        margin-top: 150px;
+        font-size: 20px;
+        font-size: 2rem;
+        line-height: 30px; }
+  #style .container .row .style-a {
+    height: 350px;
+    background-color: transparent;
+    height: 400px;
+    margin-top: 30px; }
+    #style .container .row .style-a .style-logo-a {
+      width: 100%;
+      margin: 0 auto;
+      content: "";
+      display: inline-block;
+      height: 400px;
+      background: url("../images/top/Menya Fuga's Style.png") center 10%/40% auto no-repeat; }
+      @media (min-width: 550px) {
+        #style .container .row .style-a .style-logo-a {
+          width: 100%;
+          margin: 0 auto; } }
+      #style .container .row .style-a .style-logo-a .style-logo-p {
+        background: url(../images/icon_150610_257_10.png) left top/15% auto no-repeat, url(../images/icon_150610_257_10.png) left 17.5% top/10% auto no-repeat, url(../images/icon_150610_257_10.png) right bottom/15% auto no-repeat, url(../images/icon_150610_257_10.png) right 17.5% bottom/10% auto no-repeat;
+        color: #D5D3D3;
+        border: 6px inset rgba(252, 219, 4, 0.25);
+        text-align: center;
+        font-size: 18px;
+        font-size: 1.8rem;
+        line-height: 30px;
+        position: static;
+        width: 100%;
+        background-color: rgba(21, 11, 0, 0.6);
+        margin-top: 120px;
+        padding: 40px; }
 
 #news-menu .container {
+  width: 85%;
+  max-width: 1200px;
   margin-top: 30px; }
   #news-menu .container .row .news-t {
-    height: 340px;
-    background-color: #150B00;
-    position: relative; }
+    height: 400px;
+    background-color: rgba(21, 11, 0, 0.6);
+    position: relative;
+    border: 6px inset rgba(252, 219, 4, 0.25); }
     #news-menu .container .row .news-t .nt-logo {
       width: 100%;
       margin: 0 auto;
-      display: block;
-      position: absolute;
-      top: 8%;
-      left: 3%;
       content: "";
       display: inline-block;
-      height: 60px;
-      background: url("../images/Top/News_logo.png") no-repeat center 10%;
-      background-size: 70% auto; }
+      height: 100%;
+      background: url("../images/top/news_logo.png") no-repeat center 10%/auto, url(../images/icon_150610_257_25.png) top left/30% no-repeat, url(../images/icon_150610_257_25.png) right bottom/35% no-repeat; }
       @media (min-width: 550px) {
         #news-menu .container .row .news-t .nt-logo {
           width: 100%;
           margin: 0 auto; } }
     #news-menu .container .row .news-t ul {
+      display: block;
+      position: absolute;
+      top: 110px;
+      left: 7%;
       width: 87%;
-      margin: 0 auto;
-      padding-top: 75px; }
+      margin: 0 auto; }
       #news-menu .container .row .news-t ul li {
         list-style: none;
         color: #D5D3D3;
         text-align: left;
         display: inline-block;
-        font-size: 14px;
-        font-size: 1.4rem;
+        font-size: 16px;
+        font-size: 1.6rem;
         line-height: 25px;
         padding-top: 5px;
         padding-bottom: 0; }
@@ -448,57 +533,58 @@ header {
       text-align: center;
       width: 95%;
       margin: 0 auto;
-      margin-top: 20px; }
+      margin-top: 20px;
+      position: absolute;
+      top: 290px;
+      left: 0; }
       @media (min-width: 550px) {
         #news-menu .container .row .news-t .next-back-btn {
-          width: 80%; } }
+          width: 100%; } }
       #news-menu .container .row .news-t .next-back-btn .totop {
         text-align: center;
         margin: 0 auto; }
     #news-menu .container .row .news-t .totop-b {
       text-align: center; }
   #news-menu .container .row .smenu-t {
-    height: 340px;
-    background-color: #150B00;
-    position: relative; }
+    min-height: 400px;
+    background-color: rgba(21, 11, 0, 0.6);
+    position: relative;
+    border: 6px inset rgba(252, 219, 4, 0.25); }
     #news-menu .container .row .smenu-t .sm-logo {
       width: 100%;
       margin: 0 auto;
-      display: block;
       position: absolute;
-      top: 8%;
-      left: 3%;
       content: "";
       display: inline-block;
-      height: 60px;
-      background: url("../images/Top/Seasonal Menu.png") no-repeat center 10%;
-      background-size: 70% auto; }
+      height: 400px;
+      background: url("../images/top/seasonal_menu.png") no-repeat center 10%/auto, url(../images/icon_150610_257_25.png) top left/30% no-repeat, url(../images/icon_150610_257_25.png) right bottom/35% no-repeat; }
       @media (min-width: 550px) {
         #news-menu .container .row .smenu-t .sm-logo {
           width: 100%;
           margin: 0 auto; } }
     #news-menu .container .row .smenu-t .sm-ul .sm-pic {
       width: 50%;
-      background-color: #150B00;
-      margin-top: 85px; }
+      background-color: transparent;
+      margin-top: 115px;
+      padding: 0; }
       #news-menu .container .row .smenu-t .sm-ul .sm-pic .s-fig {
         width: 100%;
         margin: 0 auto;
         content: "";
         display: inline-block;
-        height: 110px; }
+        height: 140px; }
         @media (min-width: 550px) {
           #news-menu .container .row .smenu-t .sm-ul .sm-pic .s-fig {
             width: 100%;
             margin: 0 auto; } }
       #news-menu .container .row .smenu-t .sm-ul .sm-pic .s-fig-t p {
-        font-size: 15px;
-        font-size: 1.5rem;
+        font-size: 18px;
+        font-size: 1.8rem;
         color: #D5D3D3;
         text-align: center;
         margin: 0;
         font-weight: bold;
-        line-height: 35px; }
+        line-height: 30px; }
       #news-menu .container .row .smenu-t .sm-ul .sm-pic .s-fig-1 {
         background: url("../images/seasonal-1.1.png") no-repeat center 30%;
         background-size: contain; }
@@ -509,503 +595,551 @@ header {
       text-align: center;
       width: 95%;
       margin: 0 auto;
-      margin-top: 5px; }
+      margin-top: 16.5px;
+      position: relative;
+      z-index: 10; }
       @media (min-width: 550px) {
         #news-menu .container .row .smenu-t .next-back-btn {
-          width: 80%; } }
+          width: 100%; } }
       #news-menu .container .row .smenu-t .next-back-btn .totop {
         text-align: center;
         margin: 0 auto; }
     #news-menu .container .row .smenu-t .totop-b {
       text-align: center; }
 
-#history .container .row .history .h-logo {
-  background: url("../images/About/History.png") no-repeat center center;
-  background-size: 40% auto; }
-#history .container .row .history .h-con {
-  height: 360px;
-  background: #150B00 url("../images/About/fig.png") no-repeat center center;
-  background-size: auto;
-  line-height: 54px; }
-  #history .container .row .history .h-con p {
-    color: #707070;
-    font-size: 16px;
-    font-size: 1.6rem; }
-  #history .container .row .history .h-con .ht1 {
-    text-align: right;
-    padding-right: 100px;
-    padding-top: 10px; }
-  #history .container .row .history .h-con .ht2 {
-    padding-left: 80px;
-    margin-bottom: 10px; }
-  #history .container .row .history .h-con .ht3 {
-    text-align: right;
-    padding-right: 40px;
-    margin-bottom: 5px; }
-  #history .container .row .history .h-con .ht4 {
-    padding-left: 100px;
-    margin-bottom: 20px; }
-  #history .container .row .history .h-con .ht5 {
-    text-align: center;
-    padding-left: 80px; }
+#history .container {
+  width: 85%;
+  max-width: 1200px; }
+  #history .container .row .history .h-logo {
+    background: url("../images/about/History.png") no-repeat center center/40% auto; }
+  #history .container .row .history .h-con {
+    height: 360px;
+    border: 6px inset rgba(252, 219, 4, 0.25);
+    background: rgba(252, 219, 4, 0.25) url("../images/about/fig.png") no-repeat center center/auto;
+    line-height: 54px; }
+    #history .container .row .history .h-con p {
+      color: #D5D3D3;
+      font-size: 17px;
+      font-size: 1.7rem; }
+    #history .container .row .history .h-con .ht1 {
+      text-align: right;
+      padding-right: 100px;
+      padding-top: 10px; }
+    #history .container .row .history .h-con .ht2 {
+      padding-left: 80px;
+      margin-bottom: 10px; }
+    #history .container .row .history .h-con .ht3 {
+      text-align: right;
+      padding-right: 40px;
+      margin-bottom: 5px; }
+    #history .container .row .history .h-con .ht4 {
+      padding-left: 100px;
+      margin-bottom: 20px; }
+    #history .container .row .history .h-con .ht5 {
+      text-align: center;
+      padding-left: 80px; }
 
-#Founder .container .f-logo {
-  background: url("../images/About/Founder.png") no-repeat center center;
-  background-size: 40% auto; }
-#Founder .container .row .f-pic .f-pic-i {
-  content: "";
-  display: inline-block;
-  height: 320px;
-  background: #150B00 url("../images/About/tentyo-1.2.png") no-repeat center center;
-  background-size: 80% auto;
-  width: 100%;
-  margin: auto;
-  padding: 20px auto; }
-  @media (min-width: 550px) {
-    #Founder .container .row .f-pic .f-pic-i {
-      width: 100%; } }
-#Founder .container .row .f-text {
-  color: #D5D3D3;
-  background: #150B00;
-  font-size: 16px;
-  font-size: 1.6rem;
-  height: 320px; }
-  #Founder .container .row .f-text p {
-    width: 80%;
-    height: 90%;
+#Founder .container {
+  width: 85%;
+  max-width: 1200px; }
+  #Founder .container .f-logo {
+    background: url("../images/about/Founder.png") no-repeat center center;
+    background-size: 40% auto; }
+  #Founder .container .row .f-pic .f-pic-i {
+    content: "";
+    display: inline-block;
+    height: 340px;
+    background: url("../images/about/tentyo-1.2.png") no-repeat center center;
+    background-size: 80% auto;
+    width: 100%;
     margin: auto;
-    line-height: 30px; }
-  #Founder .container .row .f-text .tentyo {
+    padding: 20px auto; }
+    @media (min-width: 550px) {
+      #Founder .container .row .f-pic .f-pic-i {
+        width: 100%; } }
+  #Founder .container .row .f-text {
+    color: #D5D3D3;
+    margin-left: 0%;
+    background: url(../images/icon_150610_257_25.png) top left/30% no-repeat, url(../images/icon_150610_257_25.png) right bottom/38% no-repeat;
     font-size: 18px;
     font-size: 1.8rem;
-    font-weight: bold;
-    height: 15%;
-    margin-top: 30px; }
+    height: 340px; }
+    #Founder .container .row .f-text p {
+      width: 80%;
+      height: 90%;
+      margin: auto;
+      line-height: 30px; }
+    #Founder .container .row .f-text .tentyo {
+      font-size: 20px;
+      font-size: 2rem;
+      font-weight: bold;
+      height: 15%;
+      margin-top: 10%; }
 
-#news-contents .container .row .news-cont {
-  color: #D5D3D3;
-  background: #150B00;
-  font-size: 16px;
-  font-size: 1.6rem;
-  margin-top: 30px;
-  padding: 60px; }
-  #news-contents .container .row .news-cont .title {
-    padding: 10px 0; }
-  #news-contents .container .row .news-cont p {
-    margin-bottom: 0; }
-  #news-contents .container .row .news-cont .cont {
-    display: none; }
-    #news-contents .container .row .news-cont .cont .article {
-      padding: 10px 0 10px 130px;
-      font-size: 14px;
-      font-size: 1.4rem; }
-    #news-contents .container .row .news-cont .cont .border_b {
-      content: '';
-      display: inline-block;
-      width: 40%;
-      height: 1px;
-      margin-left: 129px;
-      background-color: #707070; }
+#news-contents {
+  margin-top: 30px; }
+  #news-contents .container {
+    width: 85%;
+    max-width: 1200px;
+    background: #150B00; }
+    #news-contents .container .row .news-cont {
+      color: #D5D3D3;
+      font-size: 18px;
+      font-size: 1.8rem;
+      padding: 60px;
+      border: 6px inset rgba(252, 219, 4, 0.25);
+      background: url(../images/icon_150610_257_25.png) no-repeat, url(../images/icon_150610_257_25.png) right bottom no-repeat; }
+      #news-contents .container .row .news-cont .title {
+        padding: 10px 0; }
+      #news-contents .container .row .news-cont p {
+        margin-bottom: 0; }
+      #news-contents .container .row .news-cont .cont {
+        display: none; }
+        #news-contents .container .row .news-cont .cont .article {
+          padding: 10px 0 10px 130px;
+          font-size: 16px;
+          font-size: 1.6rem; }
+        #news-contents .container .row .news-cont .cont .border_b {
+          content: '';
+          display: inline-block;
+          width: 40%;
+          height: 1px;
+          margin-left: 129px;
+          background-color: #707070; }
 
-#season-menu .container .row .season-menu {
-  height: 470px; }
-  #season-menu .container .row .season-menu .s-logo {
-    background: url("../images/Menu/Seasonal Menu.png") no-repeat center center;
-    background-size: 40% auto; }
-  #season-menu .container .row .season-menu .sm-ul .sm-pic {
-    width: 50%;
-    background-color: #150B00;
-    padding: 30px;
-    height: 361px; }
-    #season-menu .container .row .season-menu .sm-ul .sm-pic .s-fig {
-      width: 100%;
-      margin: 0 auto;
-      content: "";
-      display: inline-block;
-      height: 200px; }
-      @media (min-width: 550px) {
+#season-menu .container {
+  width: 85%;
+  max-width: 1200px; }
+  #season-menu .container .row .season-menu {
+    height: 520px; }
+    #season-menu .container .row .season-menu .s-logo {
+      background: url("../images/menu/seasonal_menu.png") no-repeat center center;
+      background-size: 40% auto; }
+    #season-menu .container .row .season-menu .sm-ul {
+      background-color: rgba(252, 219, 4, 0.25);
+      border: 6px inset rgba(252, 219, 4, 0.25); }
+      #season-menu .container .row .season-menu .sm-ul .sm-pic {
+        width: 50%;
+        padding: 30px;
+        height: 361px;
+        background: url(../images/icon_150610_257_25.png) left top/30% auto no-repeat, url(../images/icon_150610_257_25.png) right bottom/30% auto no-repeat; }
         #season-menu .container .row .season-menu .sm-ul .sm-pic .s-fig {
           width: 100%;
+          margin: 0 auto;
+          content: "";
+          display: inline-block;
+          height: 220px; }
+          @media (min-width: 550px) {
+            #season-menu .container .row .season-menu .sm-ul .sm-pic .s-fig {
+              width: 100%;
+              margin: 0 auto; } }
+        #season-menu .container .row .season-menu .sm-ul .sm-pic .s-fig-t p {
+          font-size: 15px;
+          font-size: 1.5rem;
+          color: #D5D3D3;
+          text-align: center;
+          margin: 0;
+          line-height: 20px; }
+          #season-menu .container .row .season-menu .sm-ul .sm-pic .s-fig-t p span {
+            font-size: 17px;
+            font-size: 1.7rem;
+            color: #D5D3D3;
+            font-weight: bold;
+            line-height: 35px; }
+        #season-menu .container .row .season-menu .sm-ul .sm-pic .s-fig-1 {
+          background: url("../images/seasonal-1.1.png") no-repeat center 30%;
+          background-size: contain; }
+        #season-menu .container .row .season-menu .sm-ul .sm-pic .s-fig-2 {
+          background: url("../images/seasonal-2.1.png") no-repeat center 30%;
+          background-size: contain; }
+
+#grand-drink .container {
+  width: 85%;
+  max-width: 1200px; }
+  #grand-drink .container .row .grand .g-logo {
+    background: url("../images/menu/grand_menu.png") no-repeat center center;
+    background-size: 100% auto; }
+  #grand-drink .container .row .grand .g-menu {
+    height: 660px;
+    background-color: rgba(21, 11, 0, 0.6);
+    border: 6px inset rgba(252, 219, 4, 0.25);
+    padding: 30px 0; }
+    #grand-drink .container .row .grand .g-menu .g-menu-f {
+      width: 50%;
+      background-color: transparent;
+      height: 100%; }
+      @media (min-width: 550px) {
+        #grand-drink .container .row .grand .g-menu .g-menu-f {
+          width: 50%; } }
+      #grand-drink .container .row .grand .g-menu .g-menu-f p {
+        font-size: 13px;
+        font-size: 1.3rem;
+        color: #D5D3D3;
+        text-align: center;
+        margin: 10px 0 20px 0;
+        line-height: 20px;
+        font-weight: bold; }
+      #grand-drink .container .row .grand .g-menu .g-menu-f .tsr {
+        background: transparent url("../images/menu/grand-1.png") no-repeat center center;
+        background-size: auto 100%;
+        height: 130px; }
+      #grand-drink .container .row .grand .g-menu .g-menu-f .csr {
+        background: transparent url("../images/menu/grand-2.png") no-repeat center center;
+        background-size: auto 90%;
+        height: 130px; }
+      #grand-drink .container .row .grand .g-menu .g-menu-f .vgr {
+        background: transparent url("../images/menu/grand-3.png") no-repeat center center;
+        background-size: auto 100%;
+        height: 130px; }
+    #grand-drink .container .row .grand .g-menu .g-menu-t {
+      width: 50%;
+      background: transparent url("../images/menu/grand-menus.png") no-repeat center center;
+      background-size: 25rem auto;
+      height: 100%; }
+      @media (min-width: 550px) {
+        #grand-drink .container .row .grand .g-menu .g-menu-t {
+          width: 50%; } }
+  #grand-drink .container .row .drink .d-logo {
+    background: url("../images/menu/Drink.png") no-repeat center center;
+    background-size: 100% auto; }
+  #grand-drink .container .row .drink .d-menu {
+    height: 410px;
+    background-color: rgba(21, 11, 0, 0.6);
+    border: 6px inset rgba(252, 219, 4, 0.25);
+    padding: 30px 0; }
+    #grand-drink .container .row .drink .d-menu .d-menu-f {
+      width: 50%;
+      background: transparent url("../images/menu/BeerTeaWaterSparkring WaterOrange JuiceCoca Cola.png") no-repeat center center;
+      background-size: 23rem auto;
+      height: 100%; }
+      @media (min-width: 550px) {
+        #grand-drink .container .row .drink .d-menu .d-menu-f {
+          width: 50%; } }
+    #grand-drink .container .row .drink .d-menu .d-menu-t {
+      width: 50%;
+      background: transparent url("../images/menu/beer1.png") no-repeat -90% 80%;
+      background-size: 95% auto;
+      height: 100%; }
+      @media (min-width: 550px) {
+        #grand-drink .container .row .drink .d-menu .d-menu-t {
+          width: 50%; } }
+  #grand-drink .container .row .drink .gyo-za {
+    width: 100%;
+    background: url("../images/menu/gyo-za.jpg") no-repeat center center;
+    background-size: 80% auto;
+    height: 200px;
+    margin-top: 30px; }
+    @media (min-width: 550px) {
+      #grand-drink .container .row .drink .gyo-za {
+        width: 100%; } }
+
+#reservation .container, #contact .container {
+  width: 85%;
+  max-width: 1200px; }
+  #reservation .container .row .reservation .r-logo, #reservation .container .row .contact .r-logo, #contact .container .row .reservation .r-logo, #contact .container .row .contact .r-logo {
+    background: url("../images/r_c/Reservation.png") no-repeat center center;
+    background-size: 45% auto; }
+  #reservation .container .row .reservation .c-logo, #reservation .container .row .contact .c-logo, #contact .container .row .reservation .c-logo, #contact .container .row .contact .c-logo {
+    background: url("../images/r_c/Contact.png") no-repeat center center;
+    background-size: 45% auto; }
+  #reservation .container .row .reservation .r-con, #reservation .container .row .reservation .c-con, #reservation .container .row .contact .r-con, #reservation .container .row .contact .c-con, #contact .container .row .reservation .r-con, #contact .container .row .reservation .c-con, #contact .container .row .contact .r-con, #contact .container .row .contact .c-con {
+    background: url(../images/icon_150610_257_25.png) left top/25% auto no-repeat, url(../images/icon_150610_257_25.png) right bottom/30% auto no-repeat;
+    background-color: rgba(21, 11, 0, 0.6);
+    border: 6px inset rgba(252, 219, 4, 0.25);
+    padding: 30px 0; }
+    #reservation .container .row .reservation .r-con .r-form, #reservation .container .row .reservation .c-con .r-form, #reservation .container .row .contact .r-con .r-form, #reservation .container .row .contact .c-con .r-form, #contact .container .row .reservation .r-con .r-form, #contact .container .row .reservation .c-con .r-form, #contact .container .row .contact .r-con .r-form, #contact .container .row .contact .c-con .r-form {
+      width: 100%;
+      margin: 0 auto; }
+      @media (min-width: 550px) {
+        #reservation .container .row .reservation .r-con .r-form, #reservation .container .row .reservation .c-con .r-form, #reservation .container .row .contact .r-con .r-form, #reservation .container .row .contact .c-con .r-form, #contact .container .row .reservation .r-con .r-form, #contact .container .row .reservation .c-con .r-form, #contact .container .row .contact .r-con .r-form, #contact .container .row .contact .c-con .r-form {
+          width: 80%;
           margin: 0 auto; } }
-    #season-menu .container .row .season-menu .sm-ul .sm-pic .s-fig-t p {
-      font-size: 13px;
-      font-size: 1.3rem;
-      color: #D5D3D3;
-      text-align: center;
-      margin: 0;
-      line-height: 20px; }
-      #season-menu .container .row .season-menu .sm-ul .sm-pic .s-fig-t p span {
+      #reservation .container .row .reservation .r-con .r-form table, #reservation .container .row .reservation .c-con .r-form table, #reservation .container .row .contact .r-con .r-form table, #reservation .container .row .contact .c-con .r-form table, #contact .container .row .reservation .r-con .r-form table, #contact .container .row .reservation .c-con .r-form table, #contact .container .row .contact .r-con .r-form table, #contact .container .row .contact .c-con .r-form table {
+        border-collapse: collapse;
+        margin: 0 auto; }
+      #reservation .container .row .reservation .r-con .r-form .inform, #reservation .container .row .reservation .c-con .r-form .inform, #reservation .container .row .contact .r-con .r-form .inform, #reservation .container .row .contact .c-con .r-form .inform, #contact .container .row .reservation .r-con .r-form .inform, #contact .container .row .reservation .c-con .r-form .inform, #contact .container .row .contact .r-con .r-form .inform, #contact .container .row .contact .c-con .r-form .inform {
         font-size: 15px;
         font-size: 1.5rem;
+        display: block;
         color: #D5D3D3;
-        font-weight: bold;
-        line-height: 35px; }
-    #season-menu .container .row .season-menu .sm-ul .sm-pic .s-fig-1 {
-      background: url("../images/seasonal-1.1.png") no-repeat center 30%;
-      background-size: contain; }
-    #season-menu .container .row .season-menu .sm-ul .sm-pic .s-fig-2 {
-      background: url("../images/seasonal-2.1.png") no-repeat center 30%;
-      background-size: contain; }
+        background: rgba(112, 112, 112, 0.1);
+        border: 1px solid #707070;
+        border-radius: 2px;
+        height: 24px;
+        margin: 0;
+        padding: 0px; }
+      #reservation .container .row .reservation .r-con .r-form input[type="text"],
+      #reservation .container .row .reservation .r-con .r-form textarea, #reservation .container .row .reservation .c-con .r-form input[type="text"],
+      #reservation .container .row .reservation .c-con .r-form textarea, #reservation .container .row .contact .r-con .r-form input[type="text"],
+      #reservation .container .row .contact .r-con .r-form textarea, #reservation .container .row .contact .c-con .r-form input[type="text"],
+      #reservation .container .row .contact .c-con .r-form textarea, #contact .container .row .reservation .r-con .r-form input[type="text"],
+      #contact .container .row .reservation .r-con .r-form textarea, #contact .container .row .reservation .c-con .r-form input[type="text"],
+      #contact .container .row .reservation .c-con .r-form textarea, #contact .container .row .contact .r-con .r-form input[type="text"],
+      #contact .container .row .contact .r-con .r-form textarea, #contact .container .row .contact .c-con .r-form input[type="text"],
+      #contact .container .row .contact .c-con .r-form textarea {
+        width: 480px; }
+      #reservation .container .row .reservation .r-con .r-form input[type="text"]:focus,
+      #reservation .container .row .reservation .r-con .r-form textarea:focus,
+      #reservation .container .row .reservation .r-con .r-form select:focus, #reservation .container .row .reservation .c-con .r-form input[type="text"]:focus,
+      #reservation .container .row .reservation .c-con .r-form textarea:focus,
+      #reservation .container .row .reservation .c-con .r-form select:focus, #reservation .container .row .contact .r-con .r-form input[type="text"]:focus,
+      #reservation .container .row .contact .r-con .r-form textarea:focus,
+      #reservation .container .row .contact .r-con .r-form select:focus, #reservation .container .row .contact .c-con .r-form input[type="text"]:focus,
+      #reservation .container .row .contact .c-con .r-form textarea:focus,
+      #reservation .container .row .contact .c-con .r-form select:focus, #contact .container .row .reservation .r-con .r-form input[type="text"]:focus,
+      #contact .container .row .reservation .r-con .r-form textarea:focus,
+      #contact .container .row .reservation .r-con .r-form select:focus, #contact .container .row .reservation .c-con .r-form input[type="text"]:focus,
+      #contact .container .row .reservation .c-con .r-form textarea:focus,
+      #contact .container .row .reservation .c-con .r-form select:focus, #contact .container .row .contact .r-con .r-form input[type="text"]:focus,
+      #contact .container .row .contact .r-con .r-form textarea:focus,
+      #contact .container .row .contact .r-con .r-form select:focus, #contact .container .row .contact .c-con .r-form input[type="text"]:focus,
+      #contact .container .row .contact .c-con .r-form textarea:focus,
+      #contact .container .row .contact .c-con .r-form select:focus {
+        border: 1.5px solid #fff;
+        border-radius: 5px; }
+      #reservation .container .row .reservation .r-con .r-form textarea[name="content"], #reservation .container .row .reservation .c-con .r-form textarea[name="content"], #reservation .container .row .contact .r-con .r-form textarea[name="content"], #reservation .container .row .contact .c-con .r-form textarea[name="content"], #contact .container .row .reservation .r-con .r-form textarea[name="content"], #contact .container .row .reservation .c-con .r-form textarea[name="content"], #contact .container .row .contact .r-con .r-form textarea[name="content"], #contact .container .row .contact .c-con .r-form textarea[name="content"] {
+        display: inline-block;
+        width: 100%;
+        height: 180px; }
+      #reservation .container .row .reservation .r-con .r-form input::placeholder,
+      #reservation .container .row .reservation .r-con .r-form textarea::placeholder, #reservation .container .row .reservation .c-con .r-form input::placeholder,
+      #reservation .container .row .reservation .c-con .r-form textarea::placeholder, #reservation .container .row .contact .r-con .r-form input::placeholder,
+      #reservation .container .row .contact .r-con .r-form textarea::placeholder, #reservation .container .row .contact .c-con .r-form input::placeholder,
+      #reservation .container .row .contact .c-con .r-form textarea::placeholder, #contact .container .row .reservation .r-con .r-form input::placeholder,
+      #contact .container .row .reservation .r-con .r-form textarea::placeholder, #contact .container .row .reservation .c-con .r-form input::placeholder,
+      #contact .container .row .reservation .c-con .r-form textarea::placeholder, #contact .container .row .contact .r-con .r-form input::placeholder,
+      #contact .container .row .contact .r-con .r-form textarea::placeholder, #contact .container .row .contact .c-con .r-form input::placeholder,
+      #contact .container .row .contact .c-con .r-form textarea::placeholder {
+        color: #D5D3D3;
+        margin-left: 10px;
+        padding-left: 5px; }
+      #reservation .container .row .reservation .r-con .r-form th,
+      #reservation .container .row .reservation .r-con .r-form td, #reservation .container .row .reservation .c-con .r-form th,
+      #reservation .container .row .reservation .c-con .r-form td, #reservation .container .row .contact .r-con .r-form th,
+      #reservation .container .row .contact .r-con .r-form td, #reservation .container .row .contact .c-con .r-form th,
+      #reservation .container .row .contact .c-con .r-form td, #contact .container .row .reservation .r-con .r-form th,
+      #contact .container .row .reservation .r-con .r-form td, #contact .container .row .reservation .c-con .r-form th,
+      #contact .container .row .reservation .c-con .r-form td, #contact .container .row .contact .r-con .r-form th,
+      #contact .container .row .contact .r-con .r-form td, #contact .container .row .contact .c-con .r-form th,
+      #contact .container .row .contact .c-con .r-form td {
+        border-top: none;
+        border-bottom: none;
+        padding: 20px; }
+      #reservation .container .row .reservation .r-con .r-form th, #reservation .container .row .reservation .c-con .r-form th, #reservation .container .row .contact .r-con .r-form th, #reservation .container .row .contact .c-con .r-form th, #contact .container .row .reservation .r-con .r-form th, #contact .container .row .reservation .c-con .r-form th, #contact .container .row .contact .r-con .r-form th, #contact .container .row .contact .c-con .r-form th {
+        font-size: 18px;
+        font-size: 1.8rem;
+        color: #D5D3D3;
+        text-align: left;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 50px;
+        position: relative; }
+    #reservation .container .row .reservation .r-con .next-back-btn, #reservation .container .row .reservation .c-con .next-back-btn, #reservation .container .row .contact .r-con .next-back-btn, #reservation .container .row .contact .c-con .next-back-btn, #contact .container .row .reservation .r-con .next-back-btn, #contact .container .row .reservation .c-con .next-back-btn, #contact .container .row .contact .r-con .next-back-btn, #contact .container .row .contact .c-con .next-back-btn {
+      text-align: center; }
+      #reservation .container .row .reservation .r-con .next-back-btn .totop, #reservation .container .row .reservation .c-con .next-back-btn .totop, #reservation .container .row .contact .r-con .next-back-btn .totop, #reservation .container .row .contact .c-con .next-back-btn .totop, #contact .container .row .reservation .r-con .next-back-btn .totop, #contact .container .row .reservation .c-con .next-back-btn .totop, #contact .container .row .contact .r-con .next-back-btn .totop, #contact .container .row .contact .c-con .next-back-btn .totop {
+        text-align: center;
+        margin: 0 auto; }
+    #reservation .container .row .reservation .r-con .totop-b, #reservation .container .row .reservation .c-con .totop-b, #reservation .container .row .contact .r-con .totop-b, #reservation .container .row .contact .c-con .totop-b, #contact .container .row .reservation .r-con .totop-b, #contact .container .row .reservation .c-con .totop-b, #contact .container .row .contact .r-con .totop-b, #contact .container .row .contact .c-con .totop-b {
+      text-align: center; }
 
-#grand-drink .container .row .grand .g-logo {
-  background: url("../images/Menu/Grand Menu.png") no-repeat center center;
-  background-size: 100% auto; }
-#grand-drink .container .row .grand .g-menu {
-  height: 660px;
-  background-color: #150B00;
-  padding: 30px 0; }
-  #grand-drink .container .row .grand .g-menu .g-menu-f {
-    width: 50%;
-    background-color: #150B00;
-    height: 100%; }
-    @media (min-width: 550px) {
-      #grand-drink .container .row .grand .g-menu .g-menu-f {
-        width: 50%; } }
-    #grand-drink .container .row .grand .g-menu .g-menu-f p {
-      font-size: 13px;
-      font-size: 1.3rem;
-      color: #D5D3D3;
-      text-align: center;
-      margin: 10px 0 20px 0;
-      line-height: 20px;
-      font-weight: bold; }
-    #grand-drink .container .row .grand .g-menu .g-menu-f .tsr {
-      background: #150B00 url("../images/Menu/grand-1.png") no-repeat center center;
-      background-size: auto 100%;
-      height: 130px; }
-    #grand-drink .container .row .grand .g-menu .g-menu-f .csr {
-      background: #150B00 url("../images/Menu/grand-2.png") no-repeat center center;
-      background-size: auto 90%;
-      height: 130px; }
-    #grand-drink .container .row .grand .g-menu .g-menu-f .vgr {
-      background: #150B00 url("../images/Menu/grand-3.png") no-repeat center center;
-      background-size: auto 100%;
-      height: 130px; }
-  #grand-drink .container .row .grand .g-menu .g-menu-t {
-    width: 50%;
-    background: #150B00 url("../images/Menu/grand-menus.png") no-repeat center center;
-    background-size: 95% auto;
-    height: 100%; }
-    @media (min-width: 550px) {
-      #grand-drink .container .row .grand .g-menu .g-menu-t {
-        width: 50%; } }
-#grand-drink .container .row .drink .d-logo {
-  background: url("../images/Menu/Drink.png") no-repeat center center;
-  background-size: 100% auto; }
-#grand-drink .container .row .drink .d-menu {
-  height: 410px;
-  background-color: #150B00;
-  padding: 30px 0; }
-  #grand-drink .container .row .drink .d-menu .d-menu-f {
-    width: 50%;
-    background: #150B00 url("../images/Menu/BeerTeaWaterSparkring WaterOrange JuiceCoca Cola.png") no-repeat center center;
-    background-size: 95% auto;
-    height: 100%; }
-    @media (min-width: 550px) {
-      #grand-drink .container .row .drink .d-menu .d-menu-f {
-        width: 50%; } }
-  #grand-drink .container .row .drink .d-menu .d-menu-t {
-    width: 50%;
-    background: #150B00 url("../images/Menu/beer1.png") no-repeat -90% 80%;
-    background-size: 95% auto;
-    height: 100%; }
-    @media (min-width: 550px) {
-      #grand-drink .container .row .drink .d-menu .d-menu-t {
-        width: 50%; } }
-#grand-drink .container .row .drink .gyo-za {
-  width: 100%;
-  background: url("../images/Menu/gyo-za.jpg") no-repeat center center;
-  background-size: 80% auto;
-  height: 200px;
-  margin-top: 30px; }
-  @media (min-width: 550px) {
-    #grand-drink .container .row .drink .gyo-za {
-      width: 100%; } }
-
-#reservation .container .row .reservation .r-logo, #reservation .container .row .contact .r-logo, #contact .container .row .reservation .r-logo, #contact .container .row .contact .r-logo {
-  background: url("../images/R&C/Reservation.png") no-repeat center center;
-  background-size: 45% auto; }
-#reservation .container .row .reservation .c-logo, #reservation .container .row .contact .c-logo, #contact .container .row .reservation .c-logo, #contact .container .row .contact .c-logo {
-  background: url("../images/R&C/Contact.png") no-repeat center center;
-  background-size: 45% auto; }
-#reservation .container .row .reservation .r-con, #reservation .container .row .reservation .c-con, #reservation .container .row .contact .r-con, #reservation .container .row .contact .c-con, #contact .container .row .reservation .r-con, #contact .container .row .reservation .c-con, #contact .container .row .contact .r-con, #contact .container .row .contact .c-con {
-  height: 800px;
-  background-color: #150B00;
-  padding: 30px 0; }
-  #reservation .container .row .reservation .r-con .r-form, #reservation .container .row .reservation .c-con .r-form, #reservation .container .row .contact .r-con .r-form, #reservation .container .row .contact .c-con .r-form, #contact .container .row .reservation .r-con .r-form, #contact .container .row .reservation .c-con .r-form, #contact .container .row .contact .r-con .r-form, #contact .container .row .contact .c-con .r-form {
-    width: 100%;
-    margin: 0 auto; }
-    @media (min-width: 550px) {
-      #reservation .container .row .reservation .r-con .r-form, #reservation .container .row .reservation .c-con .r-form, #reservation .container .row .contact .r-con .r-form, #reservation .container .row .contact .c-con .r-form, #contact .container .row .reservation .r-con .r-form, #contact .container .row .reservation .c-con .r-form, #contact .container .row .contact .r-con .r-form, #contact .container .row .contact .c-con .r-form {
-        width: 80%;
-        margin: 0 auto; } }
-    #reservation .container .row .reservation .r-con .r-form table, #reservation .container .row .reservation .c-con .r-form table, #reservation .container .row .contact .r-con .r-form table, #reservation .container .row .contact .c-con .r-form table, #contact .container .row .reservation .r-con .r-form table, #contact .container .row .reservation .c-con .r-form table, #contact .container .row .contact .r-con .r-form table, #contact .container .row .contact .c-con .r-form table {
-      border-collapse: collapse;
-      margin: 0 10px auto; }
-    #reservation .container .row .reservation .r-con .r-form .inform, #reservation .container .row .reservation .c-con .r-form .inform, #reservation .container .row .contact .r-con .r-form .inform, #reservation .container .row .contact .c-con .r-form .inform, #contact .container .row .reservation .r-con .r-form .inform, #contact .container .row .reservation .c-con .r-form .inform, #contact .container .row .contact .r-con .r-form .inform, #contact .container .row .contact .c-con .r-form .inform {
-      font-size: 15px;
-      font-size: 1.5rem;
-      display: block;
-      color: #D5D3D3;
-      background: rgba(112, 112, 112, 0.1);
-      border: 1px solid #707070;
-      border-radius: 2px;
-      height: 24px;
-      margin: 0;
-      padding: 0px; }
-    #reservation .container .row .reservation .r-con .r-form input[type="text"],
-    #reservation .container .row .reservation .r-con .r-form textarea, #reservation .container .row .reservation .c-con .r-form input[type="text"],
-    #reservation .container .row .reservation .c-con .r-form textarea, #reservation .container .row .contact .r-con .r-form input[type="text"],
-    #reservation .container .row .contact .r-con .r-form textarea, #reservation .container .row .contact .c-con .r-form input[type="text"],
-    #reservation .container .row .contact .c-con .r-form textarea, #contact .container .row .reservation .r-con .r-form input[type="text"],
-    #contact .container .row .reservation .r-con .r-form textarea, #contact .container .row .reservation .c-con .r-form input[type="text"],
-    #contact .container .row .reservation .c-con .r-form textarea, #contact .container .row .contact .r-con .r-form input[type="text"],
-    #contact .container .row .contact .r-con .r-form textarea, #contact .container .row .contact .c-con .r-form input[type="text"],
-    #contact .container .row .contact .c-con .r-form textarea {
-      width: 480px; }
-    #reservation .container .row .reservation .r-con .r-form input[type="text"]:focus,
-    #reservation .container .row .reservation .r-con .r-form textarea:focus,
-    #reservation .container .row .reservation .r-con .r-form select:focus, #reservation .container .row .reservation .c-con .r-form input[type="text"]:focus,
-    #reservation .container .row .reservation .c-con .r-form textarea:focus,
-    #reservation .container .row .reservation .c-con .r-form select:focus, #reservation .container .row .contact .r-con .r-form input[type="text"]:focus,
-    #reservation .container .row .contact .r-con .r-form textarea:focus,
-    #reservation .container .row .contact .r-con .r-form select:focus, #reservation .container .row .contact .c-con .r-form input[type="text"]:focus,
-    #reservation .container .row .contact .c-con .r-form textarea:focus,
-    #reservation .container .row .contact .c-con .r-form select:focus, #contact .container .row .reservation .r-con .r-form input[type="text"]:focus,
-    #contact .container .row .reservation .r-con .r-form textarea:focus,
-    #contact .container .row .reservation .r-con .r-form select:focus, #contact .container .row .reservation .c-con .r-form input[type="text"]:focus,
-    #contact .container .row .reservation .c-con .r-form textarea:focus,
-    #contact .container .row .reservation .c-con .r-form select:focus, #contact .container .row .contact .r-con .r-form input[type="text"]:focus,
-    #contact .container .row .contact .r-con .r-form textarea:focus,
-    #contact .container .row .contact .r-con .r-form select:focus, #contact .container .row .contact .c-con .r-form input[type="text"]:focus,
-    #contact .container .row .contact .c-con .r-form textarea:focus,
-    #contact .container .row .contact .c-con .r-form select:focus {
-      border: 1.5px solid #fff;
-      border-radius: 5px; }
-    #reservation .container .row .reservation .r-con .r-form textarea[name="content"], #reservation .container .row .reservation .c-con .r-form textarea[name="content"], #reservation .container .row .contact .r-con .r-form textarea[name="content"], #reservation .container .row .contact .c-con .r-form textarea[name="content"], #contact .container .row .reservation .r-con .r-form textarea[name="content"], #contact .container .row .reservation .c-con .r-form textarea[name="content"], #contact .container .row .contact .r-con .r-form textarea[name="content"], #contact .container .row .contact .c-con .r-form textarea[name="content"] {
-      display: inline-block;
+#confirmation .container {
+  width: 85%;
+  max-width: 1200px; }
+  #confirmation .container .row .confirmation .con-logo {
+    background: url("../images/r_c/Confirmation.png") no-repeat center center;
+    background-size: 45% auto; }
+  #confirmation .container .row .confirmation .r-con, #confirmation .container .row .confirmation .c-con {
+    height: 800px;
+    background: url(../images/icon_150610_257_25.png) left top/25% auto no-repeat, url(../images/icon_150610_257_25.png) right bottom/30% auto no-repeat;
+    background-color: rgba(21, 11, 0, 0.6);
+    border: 6px inset rgba(252, 219, 4, 0.25);
+    padding: 30px 0; }
+    #confirmation .container .row .confirmation .r-con .r-form, #confirmation .container .row .confirmation .c-con .r-form {
       width: 100%;
-      height: 180px; }
-    #reservation .container .row .reservation .r-con .r-form input::placeholder,
-    #reservation .container .row .reservation .r-con .r-form textarea::placeholder, #reservation .container .row .reservation .c-con .r-form input::placeholder,
-    #reservation .container .row .reservation .c-con .r-form textarea::placeholder, #reservation .container .row .contact .r-con .r-form input::placeholder,
-    #reservation .container .row .contact .r-con .r-form textarea::placeholder, #reservation .container .row .contact .c-con .r-form input::placeholder,
-    #reservation .container .row .contact .c-con .r-form textarea::placeholder, #contact .container .row .reservation .r-con .r-form input::placeholder,
-    #contact .container .row .reservation .r-con .r-form textarea::placeholder, #contact .container .row .reservation .c-con .r-form input::placeholder,
-    #contact .container .row .reservation .c-con .r-form textarea::placeholder, #contact .container .row .contact .r-con .r-form input::placeholder,
-    #contact .container .row .contact .r-con .r-form textarea::placeholder, #contact .container .row .contact .c-con .r-form input::placeholder,
-    #contact .container .row .contact .c-con .r-form textarea::placeholder {
-      color: #D5D3D3;
-      margin-left: 10px;
-      padding-left: 5px; }
-    #reservation .container .row .reservation .r-con .r-form th,
-    #reservation .container .row .reservation .r-con .r-form td, #reservation .container .row .reservation .c-con .r-form th,
-    #reservation .container .row .reservation .c-con .r-form td, #reservation .container .row .contact .r-con .r-form th,
-    #reservation .container .row .contact .r-con .r-form td, #reservation .container .row .contact .c-con .r-form th,
-    #reservation .container .row .contact .c-con .r-form td, #contact .container .row .reservation .r-con .r-form th,
-    #contact .container .row .reservation .r-con .r-form td, #contact .container .row .reservation .c-con .r-form th,
-    #contact .container .row .reservation .c-con .r-form td, #contact .container .row .contact .r-con .r-form th,
-    #contact .container .row .contact .r-con .r-form td, #contact .container .row .contact .c-con .r-form th,
-    #contact .container .row .contact .c-con .r-form td {
-      border-top: none;
-      border-bottom: none;
-      padding: 20px; }
-    #reservation .container .row .reservation .r-con .r-form th, #reservation .container .row .reservation .c-con .r-form th, #reservation .container .row .contact .r-con .r-form th, #reservation .container .row .contact .c-con .r-form th, #contact .container .row .reservation .r-con .r-form th, #contact .container .row .reservation .c-con .r-form th, #contact .container .row .contact .r-con .r-form th, #contact .container .row .contact .c-con .r-form th {
-      font-size: 16px;
-      font-size: 1.6rem;
-      color: #D5D3D3;
-      text-align: left;
+      margin: 0 auto; }
+      @media (min-width: 550px) {
+        #confirmation .container .row .confirmation .r-con .r-form, #confirmation .container .row .confirmation .c-con .r-form {
+          width: 80%;
+          margin: 0 auto; } }
+      #confirmation .container .row .confirmation .r-con .r-form table, #confirmation .container .row .confirmation .c-con .r-form table {
+        border-collapse: collapse;
+        margin: 0 auto; }
+      #confirmation .container .row .confirmation .r-con .r-form .inform, #confirmation .container .row .confirmation .c-con .r-form .inform {
+        font-size: 15px;
+        font-size: 1.5rem;
+        display: block;
+        color: #D5D3D3;
+        background: rgba(112, 112, 112, 0.1);
+        border: 1px solid #707070;
+        border-radius: 2px;
+        height: 24px;
+        margin: 0;
+        padding: 0px; }
+      #confirmation .container .row .confirmation .r-con .r-form input[type="text"],
+      #confirmation .container .row .confirmation .r-con .r-form textarea, #confirmation .container .row .confirmation .c-con .r-form input[type="text"],
+      #confirmation .container .row .confirmation .c-con .r-form textarea {
+        width: 480px; }
+      #confirmation .container .row .confirmation .r-con .r-form input[type="text"]:focus,
+      #confirmation .container .row .confirmation .r-con .r-form textarea:focus,
+      #confirmation .container .row .confirmation .r-con .r-form select:focus, #confirmation .container .row .confirmation .c-con .r-form input[type="text"]:focus,
+      #confirmation .container .row .confirmation .c-con .r-form textarea:focus,
+      #confirmation .container .row .confirmation .c-con .r-form select:focus {
+        border: 1.5px solid #fff;
+        border-radius: 5px; }
+      #confirmation .container .row .confirmation .r-con .r-form textarea[name="content"], #confirmation .container .row .confirmation .c-con .r-form textarea[name="content"] {
+        display: inline-block;
+        width: 100%;
+        height: 180px; }
+      #confirmation .container .row .confirmation .r-con .r-form input::placeholder,
+      #confirmation .container .row .confirmation .r-con .r-form textarea::placeholder, #confirmation .container .row .confirmation .c-con .r-form input::placeholder,
+      #confirmation .container .row .confirmation .c-con .r-form textarea::placeholder {
+        color: #D5D3D3;
+        margin-left: 10px;
+        padding-left: 5px; }
+      #confirmation .container .row .confirmation .r-con .r-form th,
+      #confirmation .container .row .confirmation .r-con .r-form td, #confirmation .container .row .confirmation .c-con .r-form th,
+      #confirmation .container .row .confirmation .c-con .r-form td {
+        border-top: none;
+        border-bottom: none;
+        padding: 20px; }
+      #confirmation .container .row .confirmation .r-con .r-form th, #confirmation .container .row .confirmation .c-con .r-form th {
+        font-size: 16px;
+        font-size: 1.6rem;
+        color: #D5D3D3;
+        text-align: left;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 50px;
+        position: relative; }
+    #confirmation .container .row .confirmation .r-con .next-back-btn .back, #confirmation .container .row .confirmation .c-con .next-back-btn .back {
+      text-align: center;
       margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-left: 50px;
-      position: relative; }
-  #reservation .container .row .reservation .r-con .next-back-btn, #reservation .container .row .reservation .c-con .next-back-btn, #reservation .container .row .contact .r-con .next-back-btn, #reservation .container .row .contact .c-con .next-back-btn, #contact .container .row .reservation .r-con .next-back-btn, #contact .container .row .reservation .c-con .next-back-btn, #contact .container .row .contact .r-con .next-back-btn, #contact .container .row .contact .c-con .next-back-btn {
-    text-align: center; }
-    #reservation .container .row .reservation .r-con .next-back-btn .totop, #reservation .container .row .reservation .c-con .next-back-btn .totop, #reservation .container .row .contact .r-con .next-back-btn .totop, #reservation .container .row .contact .c-con .next-back-btn .totop, #contact .container .row .reservation .r-con .next-back-btn .totop, #contact .container .row .reservation .c-con .next-back-btn .totop, #contact .container .row .contact .r-con .next-back-btn .totop, #contact .container .row .contact .c-con .next-back-btn .totop {
+      float: left; }
+    #confirmation .container .row .confirmation .r-con .next-back-btn .next, #confirmation .container .row .confirmation .c-con .next-back-btn .next {
+      text-align: center;
+      margin: 0;
+      float: right; }
+  #confirmation .container .row .confirmation .c-con {
+    height: 540px; }
+
+#complete .container {
+  width: 85%;
+  max-width: 1200px; }
+  #complete .container .row .complete .con-logo {
+    background: url("../images/r_c/Confirmation.png") no-repeat center center;
+    background-size: 45% auto; }
+  #complete .container .row .complete .tk_bt {
+    height: 280px;
+    background: url(../images/icon_150610_257_25.png) left top/10% auto no-repeat, url(../images/icon_150610_257_25.png) 11.5% top/10% auto no-repeat, url(../images/icon_150610_257_25.png) 23% top/10% auto no-repeat, url(../images/icon_150610_257_25.png) right bottom/10% auto no-repeat, url(../images/icon_150610_257_25.png) right 11.5% bottom/10% auto no-repeat, url(../images/icon_150610_257_25.png) right 23% bottom/10% auto no-repeat;
+    background-color: rgba(21, 11, 0, 0.6);
+    border: 6px inset rgba(252, 219, 4, 0.25);
+    padding: 30px 0; }
+    #complete .container .row .complete .tk_bt p {
+      color: #999411;
+      font-weight: bold;
+      font-size: 30px;
+      font-size: 3rem;
+      margin-top: 40px;
+      text-align: center; }
+    #complete .container .row .complete .tk_bt .next-back-btn .totop {
       text-align: center;
       margin: 0 auto; }
-  #reservation .container .row .reservation .r-con .totop-b, #reservation .container .row .reservation .c-con .totop-b, #reservation .container .row .contact .r-con .totop-b, #reservation .container .row .contact .c-con .totop-b, #contact .container .row .reservation .r-con .totop-b, #contact .container .row .reservation .c-con .totop-b, #contact .container .row .contact .r-con .totop-b, #contact .container .row .contact .c-con .totop-b {
-    text-align: center; }
-#reservation .container .row .reservation .c-con, #reservation .container .row .contact .c-con, #contact .container .row .reservation .c-con, #contact .container .row .contact .c-con {
-  height: 540px; }
+    #complete .container .row .complete .tk_bt .totop-b {
+      text-align: center; }
 
-#confirmation .container .row .confirmation .con-logo {
-  background: url("../images/R&C/Confirmation.png") no-repeat center center;
-  background-size: 45% auto; }
-#confirmation .container .row .confirmation .r-con, #confirmation .container .row .confirmation .c-con {
-  height: 800px;
-  background-color: #150B00;
-  padding: 30px 0; }
-  #confirmation .container .row .confirmation .r-con .r-form, #confirmation .container .row .confirmation .c-con .r-form {
-    width: 100%;
-    margin: 0 auto; }
-    @media (min-width: 550px) {
-      #confirmation .container .row .confirmation .r-con .r-form, #confirmation .container .row .confirmation .c-con .r-form {
-        width: 80%;
-        margin: 0 auto; } }
-    #confirmation .container .row .confirmation .r-con .r-form table, #confirmation .container .row .confirmation .c-con .r-form table {
-      border-collapse: collapse;
-      margin: 0 10px auto; }
-    #confirmation .container .row .confirmation .r-con .r-form .inform, #confirmation .container .row .confirmation .c-con .r-form .inform {
-      font-size: 15px;
-      font-size: 1.5rem;
-      display: block;
-      color: #D5D3D3;
-      background: rgba(112, 112, 112, 0.1);
-      border: 1px solid #707070;
-      border-radius: 2px;
-      height: 24px;
-      margin: 0;
-      padding: 0px; }
-    #confirmation .container .row .confirmation .r-con .r-form input[type="text"],
-    #confirmation .container .row .confirmation .r-con .r-form textarea, #confirmation .container .row .confirmation .c-con .r-form input[type="text"],
-    #confirmation .container .row .confirmation .c-con .r-form textarea {
-      width: 480px; }
-    #confirmation .container .row .confirmation .r-con .r-form input[type="text"]:focus,
-    #confirmation .container .row .confirmation .r-con .r-form textarea:focus,
-    #confirmation .container .row .confirmation .r-con .r-form select:focus, #confirmation .container .row .confirmation .c-con .r-form input[type="text"]:focus,
-    #confirmation .container .row .confirmation .c-con .r-form textarea:focus,
-    #confirmation .container .row .confirmation .c-con .r-form select:focus {
-      border: 1.5px solid #fff;
-      border-radius: 5px; }
-    #confirmation .container .row .confirmation .r-con .r-form textarea[name="content"], #confirmation .container .row .confirmation .c-con .r-form textarea[name="content"] {
-      display: inline-block;
-      width: 100%;
-      height: 180px; }
-    #confirmation .container .row .confirmation .r-con .r-form input::placeholder,
-    #confirmation .container .row .confirmation .r-con .r-form textarea::placeholder, #confirmation .container .row .confirmation .c-con .r-form input::placeholder,
-    #confirmation .container .row .confirmation .c-con .r-form textarea::placeholder {
-      color: #D5D3D3;
-      margin-left: 10px;
-      padding-left: 5px; }
-    #confirmation .container .row .confirmation .r-con .r-form th,
-    #confirmation .container .row .confirmation .r-con .r-form td, #confirmation .container .row .confirmation .c-con .r-form th,
-    #confirmation .container .row .confirmation .c-con .r-form td {
-      border-top: none;
-      border-bottom: none;
-      padding: 20px; }
-    #confirmation .container .row .confirmation .r-con .r-form th, #confirmation .container .row .confirmation .c-con .r-form th {
-      font-size: 16px;
-      font-size: 1.6rem;
-      color: #D5D3D3;
-      text-align: left;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-left: 50px;
-      position: relative; }
-  #confirmation .container .row .confirmation .r-con .next-back-btn .back, #confirmation .container .row .confirmation .c-con .next-back-btn .back {
-    text-align: center;
-    margin: 0;
-    float: left; }
-  #confirmation .container .row .confirmation .r-con .next-back-btn .next, #confirmation .container .row .confirmation .c-con .next-back-btn .next {
-    text-align: center;
-    margin: 0;
-    float: right; }
-#confirmation .container .row .confirmation .c-con {
-  height: 540px; }
+#shops .container {
+  width: 85%;
+  max-width: 1200px; }
+  #shops .container .row .shop1 {
+    height: 50%;
+    padding: 30px 0; }
+    #shops .container .row .shop1 .s1-logo {
+      background: url("../images/shop/Diamond Street.png") no-repeat center center; }
+    #shops .container .row .shop1 .s1-fig {
+      background: url("../images/shop/shop-1.png") no-repeat center center;
+      background-size: 45% auto; }
+    #shops .container .row .shop1 .s-b {
+      text-align: center; }
+  #shops .container .row .shop2 {
+    height: 50%;
+    padding: 30px 0; }
+    #shops .container .row .shop2 .s2-logo {
+      background: url("../images/shop/Forest Street.png") no-repeat center center; }
+    #shops .container .row .shop2 .s2-fig {
+      background: url("../images/shop/shop-2.png") no-repeat center center;
+      background-size: 45% auto; }
+    #shops .container .row .shop2 .s-b {
+      text-align: center; }
+  #shops .container .row .shop3 {
+    height: 50%;
+    padding: 30px 0; }
+    #shops .container .row .shop3 .s3-logo {
+      background: url("../images/shop/Silver Road.png") no-repeat center center; }
+    #shops .container .row .shop3 .s3-fig {
+      background: url("../images/shop/shop-3.png") no-repeat center center;
+      background-size: 45% auto; }
+    #shops .container .row .shop3 .s-b {
+      text-align: center; }
+  #shops .container .row .shop4 {
+    height: 50%;
+    padding: 30px 0; }
+    #shops .container .row .shop4 .s4-logo {
+      background: url("../images/shop/Sky Blue City.png") no-repeat center center; }
+    #shops .container .row .shop4 .s4-fig {
+      background: url("../images/shop/shop-4.png") no-repeat center center;
+      background-size: 45% auto; }
+    #shops .container .row .shop4 .s-b {
+      text-align: center; }
 
-#complete .container .row .complete .con-logo {
-  background: url("../images/R&C/Confirmation.png") no-repeat center center;
-  background-size: 45% auto; }
-#complete .container .row .complete .tk_bt {
-  height: 280px;
-  background-color: #150B00;
-  padding: 30px 0; }
-  #complete .container .row .complete .tk_bt p {
-    color: #999411;
-    font-weight: bold;
-    font-size: 30px;
-    font-size: 3rem;
-    margin-top: 40px;
-    text-align: center; }
-  #complete .container .row .complete .tk_bt .next-back-btn .totop {
-    text-align: center;
-    margin: 0 auto; }
-  #complete .container .row .complete .tk_bt .totop-b {
-    text-align: center; }
-
-#shops .container .row .shop1 {
-  height: 50%;
-  padding: 30px 0; }
-  #shops .container .row .shop1 .s1-logo {
-    background: url("../images/Shop/Diamond Street.png") no-repeat center center; }
-  #shops .container .row .shop1 .s1-fig {
-    background: url("../images/Shop/shop-1.jpg") no-repeat center center;
-    background-size: 45% auto; }
-  #shops .container .row .shop1 .s-b {
-    text-align: center; }
-#shops .container .row .shop2 {
-  height: 50%;
-  padding: 30px 0; }
-  #shops .container .row .shop2 .s2-logo {
-    background: url("../images/Shop/Forest Street.png") no-repeat center center; }
-  #shops .container .row .shop2 .s2-fig {
-    background: url("../images/Shop/shop-2.jpg") no-repeat center center;
-    background-size: 45% auto; }
-  #shops .container .row .shop2 .s-b {
-    text-align: center; }
-#shops .container .row .shop3 {
-  height: 50%;
-  padding: 30px 0; }
-  #shops .container .row .shop3 .s3-logo {
-    background: url("../images/Shop/Silver Road.png") no-repeat center center; }
-  #shops .container .row .shop3 .s3-fig {
-    background: url("../images/Shop/shop-3.jpg") no-repeat center center;
-    background-size: 45% auto; }
-  #shops .container .row .shop3 .s-b {
-    text-align: center; }
-#shops .container .row .shop4 {
-  height: 50%;
-  padding: 30px 0; }
-  #shops .container .row .shop4 .s4-logo {
-    background: url("../images/Shop/Sky Blue City.png") no-repeat center center; }
-  #shops .container .row .shop4 .s4-fig {
-    background: url("../images/Shop/shop-4.jpg") no-repeat center center;
-    background-size: 45% auto; }
-  #shops .container .row .shop4 .s-b {
-    text-align: center; }
-
-footer span::before {
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin: 0 0.5em 0 0;
-  border: 5px solid transparent;
-  border-right: 0 solid transparent;
-  border-left: 8px solid #707070; }
-footer .c_txt .copy {
-  text-align: center;
-  font-size: 9px;
-  font-size: 0.9rem;
-  color: #707070;
-  text-height: 18px; }
-footer .container .footer-line {
-  width: 95%;
-  margin: 0 auto;
-  height: 1px;
-  border-top: solid 1px #707070;
-  margin-top: 30px;
-  padding-top: 10px; }
-  @media (min-width: 550px) {
-    footer .container .footer-line {
-      width: 100%; } }
-footer .container .fs {
-  width: 40%;
-  margin: 0 auto; }
-footer .container .row .f-menu {
+footer {
   width: 100%; }
-  footer .container .row .f-menu .f-menu-l {
-    font-size: 11px;
-    font-size: 1.1rem;
+  footer span::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin: 0 0.5em 0 0;
+    border: 5px solid transparent;
+    border-right: 0 solid transparent;
+    border-left: 8px solid #707070; }
+  footer .c_txt .copy {
+    text-align: center;
+    font-size: 9px;
+    font-size: 0.9rem;
     color: #707070;
-    background-color: transparent;
-    height: 100px; }
-    footer .container .row .f-menu .f-menu-l li {
-      margin-bottom: 3px; }
+    text-height: 18px; }
+  footer .container {
+    width: 100%;
+    max-width: 1200px; }
+    footer .container .footer-line {
+      width: 95%;
+      margin: 0 auto;
+      height: 1px;
+      border-top: solid 1px #707070;
+      margin-top: 30px;
+      padding-top: 10px; }
+      @media (min-width: 550px) {
+        footer .container .footer-line {
+          width: 100%; } }
+    footer .container .fs {
+      width: 40%;
+      margin: 0 auto; }
+    footer .container .row .f-menu {
+      width: 100%; }
+      footer .container .row .f-menu .f-menu-l {
+        font-size: 11px;
+        font-size: 1.1rem;
+        color: #707070;
+        background-color: transparent;
+        height: 100px; }
+        footer .container .row .f-menu .f-menu-l li {
+          margin-bottom: 3px; }
+          footer .container .row .f-menu .f-menu-l li a {
+            text-decoration: none;
+            color: #707070; }
 
 /*# sourceMappingURL=style.css.map */
