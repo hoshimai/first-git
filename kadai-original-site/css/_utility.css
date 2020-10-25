@@ -1,0 +1,253 @@
+@charset "UTF-8";
+/* Fonts
+------------------------------------------------------------*/
+/* Colors
+------------------------------------------------------------*/
+/* Base
+------------------------------------------------------------*/
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Segoe UI", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, "ＭＳ Ｐゴシック", sans-serif; }
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center; }
+
+/* Layout 
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.btn {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: rgba(201, 23, 30, 0.8) no-repeat center center;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  font-size: 1.6rem; }
+  .btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration-line: none;
+    color: #999411; }
+
+.btn:hover {
+  background: rgba(201, 23, 30, 0.25) no-repeat center center;
+  transition: 0.25s; }
+
+.next-back-btn {
+  width: 95%;
+  margin: 0 auto;
+  height: 70px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  text-align: center; }
+  @media (min-width: 550px) {
+    .next-back-btn {
+      width: 40%; } }
+  .next-back-btn .d-btn {
+    color: #999411;
+    font-weight: bold;
+    height: 100%;
+    width: 40%;
+    background: rgba(201, 23, 30, 0.8) no-repeat center center;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+    padding-bottom: 40px;
+    font-size: 18px;
+    font-size: 1.8rem; }
+  .next-back-btn .d-btn:hover {
+    background: rgba(201, 23, 30, 0.25) no-repeat center center;
+    transition: 0.25s;
+    border-color: #3d3b07; }
+  .next-back-btn .s-btn {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    border: 1px solid #999411; }
+
+.logo {
+  width: 100%;
+  display: inline-block;
+  content: "";
+  height: 100px;
+  margin: 30px 0 auto; }
+  @media (min-width: 550px) {
+    .logo {
+      width: 100%; } }
+  @media (max-width: 768px) {
+    .logo {
+      height: 80px; } }
+
+.slogo {
+  width: 100%;
+  display: inline-block;
+  content: "";
+  height: 70px;
+  margin: 30px 0 auto; }
+  @media (min-width: 550px) {
+    .slogo {
+      width: 100%; } }
+
+.fig {
+  width: 100%;
+  display: inline-block;
+  content: "";
+  height: 200px;
+  margin: 0 auto; }
+  @media (min-width: 550px) {
+    .fig {
+      width: 100%; } }
+
+.s-info {
+  width: 100%;
+  margin: 0 auto; }
+  @media (min-width: 550px) {
+    .s-info {
+      width: 100%;
+      margin: 0 auto; } }
+  .s-info table {
+    border-collapse: collapse;
+    font-size: 16px;
+    font-size: 1.6rem;
+    color: #D5D3D3;
+    background: rgba(112, 112, 112, 0.1);
+    border: 6px inset rgba(252, 219, 4, 0.25);
+    border-radius: 2px;
+    margin: 30px auto;
+    padding: 0px; }
+    .s-info table th,
+    .s-info table td {
+      border: 1px solid rgba(252, 219, 4, 0.25);
+      padding: 20px; }
+      @media (max-width: 768px) {
+        .s-info table th,
+        .s-info table td {
+          padding: 10px; } }
+    .s-info table th {
+      font-size: 16px;
+      font-size: 1.6rem;
+      color: #D5D3D3;
+      text-align: center;
+      margin: 0; }
+
+/* Flexbox
+------------------------------------------------------------*/
+.flex-b-ul {
+  width: 95%;
+  font-size: 12px;
+  font-size: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 0 auto;
+  color: #000000;
+  justify-content: space-between; }
+  @media (min-width: 550px) {
+    .flex-b-ul {
+      width: 100%; } }
+
+.flex-b-li {
+  align-self: flex-start;
+  list-style: none;
+  padding: 10px 10px;
+  margin: 0 0px 2px 0; }
+  .flex-b-li img {
+    width: 100%; }
+
+.flex-b-ul-c {
+  width: 95%;
+  font-size: 12px;
+  font-size: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: columns;
+  align-items: flex-start;
+  margin: 0 auto;
+  color: #000000;
+  justify-content: space-between; }
+  @media (min-width: 550px) {
+    .flex-b-ul-c {
+      width: 100%; } }
+
+/* Format
+------------------------------------------------------------*/
+.date {
+  font-weight: bold;
+  margin-right: 20px; }
+
+.border_s {
+  border-bottom: solid 1px #707070; }
+  @media (max-width: 768px) {
+    .border_s {
+      border-bottom: none; } }
+
+.arrow {
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+  border-bottom: none; }
+  .arrow:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border: 0px;
+    border-top: solid 2px white;
+    border-right: solid 2px white;
+    transform: rotate(135deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px; }
+  @media (min-width: 769px) {
+    .arrow {
+      display: none; } }
+
+.arrow_t {
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+  border-bottom: none; }
+  .arrow_t:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border: 0px;
+    border-top: solid 2px white;
+    border-right: solid 2px white;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -7px; }
+
+.fade-in-bottom {
+  opacity: 0;
+  animation-name: fadein-bottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards; }
+
+@keyframes fadein-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+/*# sourceMappingURL=_utility.css.map */

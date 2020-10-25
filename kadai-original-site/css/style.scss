@@ -7,13 +7,13 @@
 
 body {
     background: url("../images/back-2.png") repeat center center;
+    // background-color: #150B00;
 }
 
 header {
     height: 140px;
     width: 100%;
     margin-top: 30px;
-    // @include widthm($pc: 100 ,$sp: 100 ,$mautoSp: 1, $mautoPc: 1);
     
     .container {
         width: 100%;
@@ -22,7 +22,6 @@ header {
         .row {
             height: 100%;
             .columns {
-                // float: none;
             }
             .logo {
                 height: 100%;
@@ -40,67 +39,53 @@ header {
             .navi {
                 height: 100%;
                 margin: 0;
-                // position: relative;
-                .pc_navi{
+                .pc_navi {
                     @include absolute($bottom:0, $right:0);
                     width: 80%;
                     height: 100%;
                     .hum_icon {
-                        // text-align: end;
                         position: fixed;
                         right: 0%;
                         z-index: 100;
                         img {
                             width: 70%;
                             margin: 0 20px 20px 20px;
-                            max-width: 70px
+                            max-width: 70px;
+                            &:hover {
+                                filter: brightness(50%);
+                                transition: filter, 0.3s;
+                            }
                         }
                     }
-                    .humb {
-                        color: rgba(201,23,30,0.8);
-                        border: 2px solid rgba(201,23,30,0.8);
-                        border-radius: 0.5rem;
-                        @include fontsize(25);
-                        padding: 0.5rem 0.5rem 0.4rem 0.4rem;
-                        position: fixed;
-                        right: 5rem;
-                    }
-                    .humb:hover {
-                        color: #fff;
-                        border-color: #fff;
-                        transition: 0.25s;
-                    }
                     .pn_ul {
-                        @include widthm($pc: 40 ,$sp: 15 ,$mautoSp: 1);
+                        @include widthm($pc: 100 ,$sp: 15 ,$mautoSp: 1);
                         display: none;
                         height: 100vh;
                         width: 40%;
                         float: right;
                         position: fixed;
                         top: 0rem;
-                        right: 9rem;
-                        z-index: 100;
-                        margin-right: 10px;
+                        right: 0rem; //9rem
+                        z-index: 1;
+                        // margin-right: 10px;
                         border: 5px groove $ac_color;
-                        background-color: rgba(201,23,30,0.8);
+                        background-color: rgba(201,23,30,0.95);
+                        background: linear-gradient(to top right, rgba(201,23,30,0.95) 50%, #000);
                         
                         .pn_li {
+                            background: transparent;
                             position: relative;
                             display: block;
-                            // background: rgba(201,23,30,0.8) no-repeat center center;
-                            // border: 1px solid $p_color_l;
                             font-weight: bold;
                             padding: 0;
                             @include widthm($pc: 100 ,$sp: 15 ,$mautoSp: 1, $mautoPc: 1);
-                            @include fontsize(16);
+                            @include fontsize(30);
                             height: 17%;
                             list-style: none;
                             a {
                                 position: absolute;
                                 @include widthm($pc: 100 ,$sp: 15 ,$mautoSp: 1, $mautoPc: 1);
                                 height: 100%;
-                                // color: $ac_color;
-                                // display: inline-block;
                                 padding: 0;
                                 img {
                                     width: 27%;
@@ -114,8 +99,7 @@ header {
                             position: relative;
                             a {
                                 position: absolute;
-                                background: darken(rgba(201,23,30,0.8),20%) url(../images/icon_150610_257_10.png) center center / 40% auto repeat;
-                                    // url(../images/icon_150610_257_10.png) center center / 40% auto no-repeat;
+                                background: darken(rgba(201,23,30,0.95),20%) url(../images/icon_150610_257_10.png) center center / 20% auto repeat;
                                 transition: 0.5s;
                                 @include widthm($pc: 100 ,$sp: 15 ,$mautoSp: 1, $mautoPc: 1);
                                 img {
@@ -126,13 +110,134 @@ header {
                         }
                     }  
                 }
+                .sp_navi {
+                    display: none;
+                }
             }
         }//row
     }//container
 }//header
 
+@media (max-width: 549px) {
+    .header-top {
+        height: 0px;
+        margin-top: 0px;
+        .container {
+            .row {
+                .logo {
+                    display: none;
+                }
+            }
+        }
+    }
+    header {
+        height: 90px;
+        margin-top: 0px;
+        .container {
+            padding: 0;
+            .row {
+                .logo {
+                    padding: 0;
+                    .logo_top {
+                        img {
+                            padding: 5px 0px 0px 5px;
+                            width: 130px;
+                        }
+                    }
+                }
+                .navi {
+                    height: 0;
+                    .pc_navi {
+                        display: none;
+                    }
+                    .sp_navi {
+                        display: block;
+                        position: fixed;
+                        z-index: 1;
+                        @include absolute($bottom:0, $right:0);
+                        width: 100%;
+                        .hum_icon {
+                            position: fixed;
+                            right: 0%;
+                            top: 0%;
+                            z-index: 1;
+                            img {
+                                width: 100%;
+                                margin: 10px 5px 0 0;
+                                max-width: 70px;
+                            }
+                        }
+                        .pn_ul {
+                            width: calc(100% - 80px);
+                            margin-right: 80px;
+                            display: none;
+                            position: fixed;
+                            height: 100vh;
+                            float: right;
+                            top: 0;
+                            right: 0;
+                            z-index: 1;
+                            border: 5px groove $ac_color;
+                            
+                            .pn_li {
+                                display: block;
+                                border-radius: 0px;
+                                border: 0.5px solid $ac_color;
+                                font-weight: bold;
+                                padding: 0;
+                                @include widthm($pc: 100 ,$sp: 100 ,$mautoSp: 1, $mautoPc: 1);
+                                @include fontsize(25);
+                                height: 16.8%;
+                                list-style: none;
+
+                                a {
+                                    @include widthm($pc: 100 ,$sp: 100 ,$mautoSp: 1, $mautoPc: 1);
+                                    height: 100%;
+                                    padding: 0;
+                                }
+                            }
+                            .pn_li:hover {
+                                background-color: rgba(201,23,30,0.95);
+                            }
+                            .m-ne {
+                                background: url(../images/icon_150610_257.png) center left 20% / 11% auto no-repeat,
+                                    url(../images/icon_150610_257.png) right 20% center / 11% no-repeat;
+                                background-color: rgba(201,23,30,0.95);
+                            }
+                            .m-ab {
+                                background: url(../images/icon_150610_257.png) center left 20% / 11% auto no-repeat,
+                                    url(../images/icon_150610_257.png) right 20% center / 11% no-repeat;
+                                background-color: rgba(201,23,30,0.95);
+                            }
+                            .m-me {
+                                background: url(../images/icon_150610_257.png) center left 20% / 11% auto no-repeat,
+                                    url(../images/icon_150610_257.png) right 20% center / 11% no-repeat;
+                                background-color: rgba(201,23,30,0.95);
+                            }
+                            .m-sh {
+                                background: url(../images/icon_150610_257.png) center left 7% / 11% auto no-repeat,
+                                    url(../images/icon_150610_257.png) right 7% center / 11% no-repeat;
+                                background-color: rgba(201,23,30,0.95);
+                            }
+                            .m-c {
+                                background: url(../images/icon_150610_257.png) center left 13% / 11% auto no-repeat,
+                                    url(../images/icon_150610_257.png) right 13% center / 11% no-repeat;
+                                background-color: rgba(201,23,30,0.95);
+                            }
+                            .m-r {
+                                background: url(../images/icon_150610_257.png) center left 13% / 11% auto no-repeat,
+                                    url(../images/icon_150610_257.png) right 13% center / 11% no-repeat;
+                                background-color: rgba(201,23,30,0.95);
+                            }
+                        }  
+                    }
+                }
+            }
+        }
+    }
+}
+
 #carcouel {
-    // padding-top: 30px;
     .container {
         width: 100%;
         height: 500px;
@@ -141,115 +246,115 @@ header {
         .row {
             .carousel {
                 margin-bottom: 40px;
-                .owl-theme {
-                    .owl-dots {
-                        margin-top: 0px;
+                .top-bg {
+                    background: url("../images/top/top-01.png") no-repeat fixed 0 0 / cover;
+                    height: 600px;
+                    width: 100%;
+                    align-items: center;
+                    display: flex;
+                    justify-content: center;
+                    animation: AnimationName 12s ease infinite;
+                    .menyafuga {
+                        height: 75%;
+                        width: 35%;
+                        max-height: 400px;
+                        margin: 0 auto;
+                        max-width: 768px;
+                        overflow: hidden;
+                        padding: 35px;
+                        position: relative;
+                        color: white;
+                        @include fontsize(70);
+                        line-height: 65px;
+                        text-shadow: -4px 4px 10px #150B00; 
+                        position: relative;
                         text-align: center;
-                        line-height: 13px;
-                        .owl-dot {
-                            height: 0px;
-                            span {
-                                width: 30px;
-                                height: 5px;
-                                margin: 5px 7px;
-                                background: $p_color_d;
+                        z-index: 0;
+                        &::before {
+                            background: url("../images/top/top-01.png") no-repeat fixed 0 0 / cover;
+                            animation: AnimationName 12s ease infinite;
+                            content: '';
+                            filter: blur(15px);
+                            height: 100%;
+                            left: 0;
+                            position: absolute;
+                            top: 0;
+                            width: 100%;
+                            z-index: -1;
+                        }
+                        .menyafuga-fig {
+                            background: url("../images/top/menyafuga.png") no-repeat top 10% left 50% / 65% auto,
+                                url("../images/top/menyafuga-d.png") no-repeat top 60% left 43% / 65% auto;
+                            content: '';
+                            height: 100%;
+                            max-height: 250px;
+                            width: 100%;
+                            max-width: 320px;
+                            margin: 0 auto;
+                        }
+                        .btn_car {
+                            margin: 0 auto;
+                            letter-spacing: 1.3px;
+                            @include fontsize(20);
+                            line-height: 3.8rem;
+                            text-shadow: none;
+                            border: 1px solid $ac_color;
+                            height: 15.5%;
+                            width: 45%;
+                            min-width: 130px;
+                            &:hover {
+                                border-color: darken($ac_color, 20%);
                             }
                         }
-                        .owl-dot.active span {
-                            background: rgba(201,23,30,0.26);
-                        }
                     }
-                    .owl-nav {
-                        text-align: left;
-                    }
-                } //.owl-theme 
-                
-                .car {
-                    // height: 500px;
-                    // width: 834px;
-                    width: 100%;
-                    background-color: $bc_color;
-                    position: relative;
-                    .car_t {
-                        @include widthm($pc: 50 ,$sp: 50 );
-                        margin: auto;
-                        content: "";
-                        display: inline-block;
-                        height: 260px;
-                        background-size: 75% auto;
-                        p {
-                            color: $p_color_l;
-                            text-align: left;
-                            display: inline-block;
-                            @include fontsize(14);
-                            line-height: 28px;
-                        }
-                    }
-                    .car_p {
-                        @include widthm($pc: 50 ,$sp: 50 );
-                        margin: auto;
-                        content: "";
-                        display: inline-block;
-                        height: 300px;
-                    }
-                    .car1_t {
-                        background: url("../images/top/What is Japanese Ramen.png") no-repeat 33% 10%;
-                        p {
-                            @include absolute($top:35%, $left:5%);
-                        }
-                    }
-                    .car1_p {
-                        background: url("../images/top/top-4.png") no-repeat center center;
-                        background-size: 90% auto;
-                    }
-                    .car2_t {
-                        background: url("../images/top/Communication created by Ramen.png") no-repeat 20% 8%;
-                        p {
-                            padding-top: 80px;
-                            padding-left: 20px;
-                        }
-                    }
-                    .car2_p {
-                        background: url("../images/top/top-1.png") no-repeat center center;
-                        background-size: 90% auto;
-                    }
-                    .btn_car {
-                        @include absolute($bottom:6%, $right:4%);
-                        @include fontsize(20);
-                        height: 115px;
-                        width: 115px;
-                        list-style: none;
-                        color: $ac_color;
-                        text-decoration-line: none;
-                        border-radius: 50%;
-                        border: 3px solid $ac_color;
-                        // border: 6px inset $bc_color_2;
-                        a {
-                            padding: 35px;
-                        }
-                    }
-                    .car3_t {
-                        background: url("../images/top/A solemn time to face food.png") no-repeat 0% 8%;
-                        p {
-                            padding-top: 85px;
-                            padding-left: 40px;
-                            text-align: center;
-                        }
-                    }
-                    .car3_p {
-                        background: url("../images/top/top-2.png") no-repeat center center;
-                        background-size: 60% auto;
-                    }
-                }//car
+                }
+                @keyframes AnimationName {
+                    0% { background: url("../images/top/top-01.png") no-repeat fixed 0 0 / cover; }
+                    50% { background: url("../images/top/top-03.png") no-repeat fixed 0 0 / cover; }
+                    100% {background: url("../images/top/top-01.png") no-repeat fixed 0 0 / cover; }
+                }
             }//columns
         }//row
     }//container
 }//carcouel
 
+@media (max-width: 768px) {
+    #carcouel {
+        .container {
+            padding: 0;
+            height: 100vh;
+            .row {
+                .carousel {
+                    .top-bg {
+                        height: 100vh;
+                        .menyafuga {
+                            height: 62%;
+                            min-height: 300px;
+                            width: 80%;
+                            padding: 40px 10px 10px 10px;
+                            .menyafuga-fig {
+                                background: url("../images/top/menyafuga.png") no-repeat top 10% left 50% / 65% auto,
+                                    url("../images/top/menyafuga-d.png") no-repeat top 25% left 43% / 65% auto;
+                                max-height: 230px;
+                            }
+                            .btn_car {
+                                @include fontsize(22);
+                                height: 52px;
+                                width: 100%;
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 #cover {
     .container {
-        width: 85%;
-        max-width: 1200px;
+        width: 100%;
+        max-width: 2000px;
         .row {
             .cover {
                 margin: 0 auto;
@@ -258,7 +363,7 @@ header {
                 display: inline-block;
                 height: 400px;
                 background: url("../images/cover_l.png") no-repeat center center;
-                background-size: 100% auto;
+                background-size: cover;
                 .clogo {
                     @include widthm($pc: 100,$sp: 30);
                     margin: auto;
@@ -267,29 +372,70 @@ header {
                     height: 400px;
                 }//clogo
                 .about {
-                    background: url("../images/about/about_fuga.png") no-repeat center center / 55% auto,
-                        url("../images/about/about_fuga_d.png") no-repeat 47% 54% / 55% auto;
+                    background: url("../images/about/about_fuga.png") no-repeat center center / 40% auto,
+                        url("../images/about/about_fuga_d.png") no-repeat 48% 53% / 40% auto;
                 }//about
                 .menu {
-                    background: url("../images/menu/menu.png") no-repeat center center / 55% auto,
-                        url("../images/menu/menu_d.png") no-repeat 47% 54% / 55% auto;
+                    background: url("../images/menu/menu.png") no-repeat center center / 40% auto,
+                        url("../images/menu/menu_d.png") no-repeat 48% 53% / 40% auto;
                 }//about
                 .news {
-                    background: url("../images/news/news_release.png") no-repeat center center / 55% auto,
-                        url("../images/news/news_release_d.png") no-repeat 47% 54% / 55% auto;
+                    background: url("../images/news/news_release.png") no-repeat center center / 40% auto,
+                        url("../images/news/news_release_d.png") no-repeat 48% 53% / 40% auto;
                 }//news
                 .r-c {
-                    background: url("../images/r_c/reservation_contact.png") no-repeat center center / 55% auto,
-                        url("../images/r_c/reservation_contact_d.png") no-repeat 47% 54% / 55% auto;
+                    background: url("../images/r_c/reservation_contact.png") no-repeat center center / 40% auto,
+                        url("../images/r_c/reservation_contact_d.png") no-repeat 48% 53% / 40% auto;
                 }//r-c
                 .shop {
-                    background: url("../images/shop/shop_information.png") no-repeat center center / 55% auto,
-                        url("../images/shop/shop_information_d.png") no-repeat 47% 54% / 55% auto;
+                    background: url("../images/shop/shop_information.png") no-repeat center center / 40% auto,
+                        url("../images/shop/shop_information_d.png") no-repeat 48% 53% / 40% auto;
                 }
             }//cover
         }//row
     }//container
 }//cover
+
+@media (max-width: 768px) {
+    #cover {
+        margin-top: 30px;
+        .container {
+            width: 100%;
+            padding: 0;
+            .row {
+                .cover {
+                    margin-top: 0px;
+                    height: 40vh;
+                    background-size: cover;
+                    .clogo {
+                         width: 100%;
+                         height: 40vh;
+                    }
+                    .about {
+                    background: url("../images/about/about_fuga.png") no-repeat center center / 100% auto,
+                        url("../images/about/about_fuga_d.png") no-repeat 47% 54% / 100% auto;
+                    }//about
+                    .menu {
+                        background: url("../images/menu/menu.png") no-repeat center center / 100% auto,
+                            url("../images/menu/menu_d.png") no-repeat 47% 54% / 100% auto;
+                    }//about
+                    .news {
+                        background: url("../images/news/news_release.png") no-repeat center center / 100% auto,
+                            url("../images/news/news_release_d.png") no-repeat 47% 54% / 100% auto;
+                    }//news
+                    .r-c {
+                        background: url("../images/r_c/reservation_contact.png") no-repeat center center / 85% auto,
+                            url("../images/r_c/reservation_contact_d.png") no-repeat 47% 54% / 85% auto;
+                    }//r-c
+                    .shop {
+                        background: url("../images/shop/shop_information.png") no-repeat center center / 100% auto,
+                            url("../images/shop/shop_information_d.png") no-repeat 47% 54% / 100% auto;
+                    }
+                }
+            }
+        }
+    }
+}
 
 #style {
     .container {
@@ -307,17 +453,13 @@ header {
                     content: "";
                     display: inline-block;
                     height: 400px;
-                    // background: url("../images/top/Menya Fuga's Style.png") no-repeat center 23%;
-                    background: url("../images/top/Menya Fuga's Style.png") center 20% / 40% auto no-repeat,
+                    background: url("../images/top/menya_fuga's_style.png") center 20% / 40% auto no-repeat,
                         url(../images/icon_150610_257_10.png) no-repeat,
                         url(../images/icon_150610_257_10.png) right bottom no-repeat;
-                    // background-size: 40% auto;
                     p {
                         color: $p_color_l;
                         text-align: center;
                         margin-top: 150px;
-                        // display: inline-block;
-                        // @include absolute($top:42%, $left:25%);
                         @include fontsize(20);
                         line-height: 30px;
                     }  
@@ -333,7 +475,7 @@ header {
                     content: "";
                     display: inline-block;
                     height: 400px;
-                    background: url("../images/top/Menya Fuga's Style.png") center 10% / 40% auto no-repeat;
+                    background: url("../images/top/menya_fuga's_style.png") center 10% / 40% auto no-repeat;
                     .style-logo-p {
                         background: url(../images/icon_150610_257_10.png) left top / 15% auto no-repeat,
                             url(../images/icon_150610_257_10.png) left 17.5% top / 10% auto no-repeat,
@@ -356,6 +498,94 @@ header {
     }//container
 }// #style
 
+@media (max-width: 768px) {
+    #style {
+        .container {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            .row {
+                .style {
+                    height: 400px;
+                    .style-logo {
+                        height: 100%;
+                        background: url("../images/top/menya_fuga's_style.png") center 10%/60% auto no-repeat,
+                            url(../images/icon_150610_257_10.png) top left /30% auto no-repeat,
+                            url(../images/icon_150610_257_10.png) right bottom /30% auto no-repeat;
+                        p {
+                            @include fontsize(18);
+                        }
+                    }
+                }
+                .style-a {
+                    height: 100%;
+                    .style-logo-a {
+                        height: 100px;
+                        background: url("../images/top/menya_fuga's_style.png") center 10%/60% auto no-repeat;
+                        .style-logo-p {
+                            background: url(../images/icon_150610_257_10.png) left top/20% auto no-repeat,
+                                url(../images/icon_150610_257_10.png) left 25% top/15% auto no-repeat,
+                                url(../images/icon_150610_257_10.png) right bottom/20% auto no-repeat,
+                                url(../images/icon_150610_257_10.png) right 25% bottom/15% auto no-repeat;
+                            margin-top: 80px;
+                            padding: 30px 10px;
+                            background-color: $bc_color_3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 549px) {
+    #style {
+        .container {
+            .row {
+                .style {
+                    height: 100%;
+                    .style-logo {
+                        background: url("../images/top/menya_fuga's_style.png") center 10%/70% auto no-repeat,
+                            url(../images/icon_150610_257_10.png) top left /30% auto no-repeat,
+                            url(../images/icon_150610_257_10.png) right bottom /30% auto no-repeat;
+                        p {
+                            margin-top: 120px;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    #style {
+        .container {
+            .row {
+                .style {
+                    .style-logo {
+                        background: url("../images/top/menya_fuga's_style.png") center 10%/100% auto no-repeat,
+                            url(../images/icon_150610_257_10.png) top left /30% auto no-repeat,
+                            url(../images/icon_150610_257_10.png) right bottom /30% auto no-repeat;
+                    }
+                }
+                .style-a {
+                    .style-logo-a {
+                        background: url("../images/top/menya_fuga's_style.png") center 10%/95% auto no-repeat;
+                        .style-logo-p {
+                            background: url(../images/icon_150610_257_10.png) left top/30% auto no-repeat,
+                                url(../images/icon_150610_257_10.png) left 40% top/22% auto no-repeat,
+                                url(../images/icon_150610_257_10.png) right bottom/30% auto no-repeat,
+                                url(../images/icon_150610_257_10.png) right 40% bottom/22% auto no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 #news-menu {
     .container {
         width: 85%;
@@ -363,26 +593,23 @@ header {
         margin-top: 30px;
         .row {
             .news-t {
-                height: 400px;
+                min-height: 400px;
+                height: 100%;
+                background: url(../images/icon_150610_257_25.png) top left / 30% no-repeat,
+                        url(../images/icon_150610_257_25.png) right bottom / 35% no-repeat;
                 background-color: $bc_color_3;
-                position: relative;
                 border: 6px inset $bc_color_2;
                 .nt-logo {
-                    @include widthm($pc: 100 ,$sp: 100 ,$mautoSp: 1, $mautoPc: 1);
-                    // @include absolute($top:8%, $left:3%);
+                    @include widthm($pc: 100 ,$sp: 100 ,$mautoSp: 1);
                     content: "";
                     display: inline-block;
-                    height: 100%;
-                    background: url("../images/top/news_logo.png") no-repeat center 10% / auto,
-                        url(../images/icon_150610_257_25.png) top left / 30% no-repeat,
-                        url(../images/icon_150610_257_25.png) right bottom / 35% no-repeat;
-                    // background-size: 70% auto;
+                    margin-top: 30px;
+                    height: 80px;
+                    background: url("../images/top/news_logo.png") no-repeat center center / auto;
                 }
                 ul {
-                    @include absolute($top:110px, $left:7%);
                     width: 87%;
                     margin: 0 auto;
-                    // padding-top: 75px;
                     li {
                         list-style: none;
                         color: $p_color_l;
@@ -404,12 +631,13 @@ header {
                     text-align: center;
                     @include widthm($pc: 100, $sp: 95, $mautoSp: 1);
                     margin-top: 20px;
-                    position: absolute;
-                    top: 290px;
-                    left: 0;
                     .totop {
+                        border: 1px solid $ac_color;
                         text-align: center;
                         margin: 0 auto;
+                        &:hover {
+                            border-color: darken($ac_color, 20%);
+                        }
                     }
                 }
                 .totop-b {
@@ -418,18 +646,19 @@ header {
             }//news-t
             .smenu-t {
                 min-height: 400px;
+                background: url(../images/icon_150610_257_25.png) top left / 30% no-repeat,
+                        url(../images/icon_150610_257_25.png) right bottom / 35% no-repeat;
                 background-color: $bc_color_3;
                 position: relative;
                 border: 6px inset $bc_color_2;
                 .sm-logo {
-                    @include widthm($pc: 100 ,$sp: 100 ,$mautoSp: 1, $mautoPc: 1);
+                    @include widthm($pc: 100 ,$sp: 100 ,$mautoSp: 1);
                     position: absolute;
                     content: "";
                     display: inline-block;
-                    height: 400px;
-                    background: url("../images/top/seasonal_menu.png") no-repeat center 10% / auto,
-                        url(../images/icon_150610_257_25.png) top left / 30% no-repeat,
-                        url(../images/icon_150610_257_25.png) right bottom / 35% no-repeat;
+                    height: 80px;
+                    background: url("../images/top/seasonal_menu.png") no-repeat center center / auto;
+                    margin-top: 30px;
                 }
                 .sm-ul {
                     .sm-pic {
@@ -454,10 +683,12 @@ header {
                             }
                         }
                         .s-fig-1 {
+                            overflow: hidden;
                             background: url("../images/seasonal-1.1.png") no-repeat center 30%;
                             background-size: contain;
                         }
                         .s-fig-2 {
+                            overflow: hidden;
                             background: url("../images/seasonal-2.1.png") no-repeat center 30%;
                             background-size: contain;
                         }
@@ -470,8 +701,12 @@ header {
                     position: relative;
                     z-index: 10;
                     .totop {
+                        border: 1px solid $ac_color;
                         text-align: center;
                         margin: 0 auto;
+                        &:hover {
+                            border-color: darken($ac_color, 20%);
+                        }
                     }
                 }
                 .totop-b {
@@ -482,6 +717,76 @@ header {
     }//container
 }//#news-menu
 
+@media (max-width: 768px) {
+    #news-menu {
+        .container {
+            width: 100%;
+            padding: 0;
+            .row {
+                .news-t {
+                    height: 100%;
+                    .nt-logo {
+                        background: url(../images/top/news_logo.png) no-repeat center 10%/auto;
+                    }
+                    ul {
+                        top: 90px;
+                        li {
+                            line-height: 20px;
+                        }
+                    }
+                    .next-back-btn {
+                        height: 100%;
+                        .totop {
+                            padding: 5px;
+                            width: 80%;
+                            &:hover {
+                                border-color: darken($ac_color, 20%);
+                            }
+                        }
+                    }
+                }
+                .smenu-t {
+                    .next-back-btn {
+                        .totop {
+                            width: 80%;
+                        }
+                    }
+                    .sm-ul {
+                        margin-top: 100px;
+                        .sm-pic {
+                            width: 100%;
+                            margin-top: 15px;
+                            .s-fig-1 {
+                                height: 200px;
+                            }
+                            .s-fig-2 {
+                                height: 200px;
+                            }
+                            .s-fig-t {
+                                p {
+                                    line-height: 23px;   
+                                }
+                            }
+                        }
+                    }
+                } 
+            }
+        }
+    }
+}
+
+@media (max-width: 549px) {
+    #news-menu {
+        .container {
+            .row {
+                .smenu-t {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
 #history {
     .container {
         width: 85%;
@@ -489,7 +794,7 @@ header {
         .row {
             .history {
                 .h-logo {
-                    background: url("../images/about/History.png") no-repeat center center / 40% auto;
+                    background: url("../images/about/history.png") no-repeat center center / 40% auto;
                 }
                 .h-con {
                     height: 360px;
@@ -499,9 +804,6 @@ header {
                     p {
                         color: $p_color_l;
                         @include fontsize(17);
-                        // margin: 0;
-                        // text-indent: -7.5em;
-                        // padding-left: 105px;
                     }
                     .ht1 {
                         text-align: right;
@@ -531,13 +833,78 @@ header {
     }
 }//history
 
+@media (max-width: 768px) {
+    #history {
+        .container {
+            width: 100%;
+            padding: 0;
+            .row {
+                .history {
+                    .h-logo {
+                        background: url(../images/about/history.png) no-repeat center center/60% auto;
+                        margin: 60px 0 auto;
+                    }
+                    .h-con {
+                        background: transparent;
+                        background-color: rgba(252, 219, 4, 0.25);
+                        line-height: 20px;
+                        padding: 20px 0px;
+                        height: 100%;
+                        .ht1,.ht2,.ht3,.ht4,.ht5 {
+                            width: 90%;
+                            padding: 0;
+                            margin: 0 auto;
+                            text-align: left;
+                            @include fontsize(16);
+                            .date {
+                                margin-right: 6px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    #history {
+        .container {
+            .row {
+                .history {
+                    .h-logo {
+                        background: url(../images/about/history.png) no-repeat center center/100% auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 321px) {
+    #history {
+        .container {
+            .row {
+                .history {
+                    .h-con {
+                        .ht1,.ht2,.ht3,.ht4,.ht5 {
+                            width: 100%;
+                            margin: 0 0 0 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 #Founder {
     .container {
         width: 85%;
         max-width: 1200px;
         
         .f-logo {
-            background: url("../images/about/Founder.png") no-repeat center center;
+            background: url("../images/about/founder.png") no-repeat center center;
             background-size: 40% auto;
         }
         .row {
@@ -576,7 +943,57 @@ header {
             }
         }//row
     }//container   
-}//Founder  
+}//Founder
+
+@media (max-width: 768px) {
+    #Founder {
+        .container {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            .f-logo {
+                background-size: 55% auto;
+            }
+            .row {
+                .f-pic {
+                    .f-pic-i {
+                        background-size: 100% auto;
+                    }
+                }
+                .f-text {
+                    height: 300px;
+                    margin-top: 10px;
+                    .tentyo {
+                        margin-top: 5%;
+                        height: 13%;
+                    }
+                    p {
+                        width: 90%;
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    #Founder {
+        .container {
+            .f-logo {
+                background-size: 100% auto;
+            }
+            .row {
+                .f-pic {
+                    .f-pic-i {
+                        height: 200px;
+                        background-size: 100% auto;
+                    }
+                }
+            }
+        }
+    }
+}
 
 #news-contents {
     margin-top: 30px;
@@ -595,6 +1012,9 @@ header {
                         url(../images/icon_150610_257_25.png) right bottom no-repeat;
                 .title {
                     padding: 10px 0;
+                    &:hover {
+                        color: darken($p_color_l, 35%);
+                    }
                 }
                 p {
                     margin-bottom: 0;
@@ -602,7 +1022,7 @@ header {
                 .cont {
                     display: none;
                     .article {
-                        padding: 10px 0 10px 130px;
+                        padding: 10px 0 0 130px;
                         @include fontsize(16);
                     }
                     .border_b {
@@ -619,16 +1039,49 @@ header {
     }//container
 }//news-contents
 
+@media (max-width: 768px) {
+    #news-contents {
+        .container {
+            width: 100%;
+            padding: 0;
+            .row {
+                .news-cont {
+                    padding: 20px 10px;
+                    background: url(../images/icon_150610_257_25.png) no-repeat top left/ 60%,
+                        url(../images/icon_150610_257_25.png) right bottom /60% no-repeat;
+                    .title {
+                        .date {
+                            display: block;
+                        }
+                        &:hover {
+                            color: $p_color_l;
+                        }
+                    }
+                    .cont {
+                        .article {
+                            padding: 0 0 0 15%;
+                        }
+                        .border_b {
+                            width: 85%;
+                            margin-left: 15%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 #season-menu {
     .container {
         width: 85%;
         max-width: 1200px;
         .row {
             .season-menu {
-                height: 520px;
+                height: auto;
                 .s-logo {
                     background: url("../images/menu/seasonal_menu.png") no-repeat center center;
-                    background-size: 40% auto;
+                    background-size: 50% auto;
                 }
                 .sm-ul {
                     background-color: $bc_color_2;
@@ -636,7 +1089,7 @@ header {
                     .sm-pic {
                         width: 50%;
                         padding: 30px;
-                        height: 361px;
+                        height: 100%;
                         background: url(../images/icon_150610_257_25.png) left top / 30% auto no-repeat,
                         url(../images/icon_150610_257_25.png) right bottom / 30% auto no-repeat;
                         .s-fig {
@@ -647,13 +1100,13 @@ header {
                         }
                         .s-fig-t {
                             p {
-                                @include fontsize(15);
+                                @include fontsize(16);
                                 color: $p_color_l;
                                 text-align: center;
                                 margin: 0;
                                 line-height: 20px;
                                 span {
-                                    @include fontsize(17);
+                                    @include fontsize(18);
                                     color: $p_color_l;
                                     font-weight: bold;
                                     line-height: 35px;
@@ -661,10 +1114,12 @@ header {
                             }
                         }
                         .s-fig-1 {
+                            overflow: hidden;
                             background: url("../images/seasonal-1.1.png") no-repeat center 30%;
                             background-size: contain;
                         }
                         .s-fig-2 {
+                            overflow: hidden;
                             background: url("../images/seasonal-2.1.png") no-repeat center 30%;
                             background-size: contain;
                         }
@@ -674,6 +1129,51 @@ header {
         }//row
     }//container
 }//season-menu
+
+@media (max-width: 767px) {
+    #season-menu {
+        .container {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            .row {
+                .season-menu {
+                    height: 100%;
+                    .s-logo {
+                        background-size: 70% auto;
+                    }
+                    .sm-ul {
+                        margin: 0;
+                        width: 100%;
+                        padding-top: 20px;
+                        .sm-pic {
+                            width: 100%;
+                            padding: 0 0 20px 0;
+                            height: 100%;
+                            .s-fig-t {
+                                padding: 0 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    #season-menu {
+        .container {
+            .row {
+                .season-menu {
+                    .s-logo {
+                        background-size: 100% auto;
+                    }
+                }
+            }
+        }
+    }
+}
 
 #grand-drink {
     .container {
@@ -710,7 +1210,7 @@ header {
                         }
                         .csr {
                             background:transparent url("../images/menu/grand-2.png") no-repeat center center;
-                            background-size: auto 90%;
+                            background-size: auto 98%;
                             height: 130px;
                         }
                         .vgr {
@@ -722,32 +1222,32 @@ header {
                     .g-menu-t {
                         @include widthm($pc: 50 ,$sp: 50 );
                         background:transparent url("../images/menu/grand-menus.png") no-repeat center center;
-                        background-size: 25rem auto;
+                        background-size: auto 55rem;
                         height: 100%;
                     }
                 }
             }//grand
             .drink {
                 .d-logo {
-                    background: url("../images/menu/Drink.png") no-repeat center center;
-                    background-size: 100% auto;                    
+                    background: url("../images/menu/drink.png") no-repeat center center;
+                    background-size: 100% auto; 
                 }
                 .d-menu {
-                    height: 410px;
+                    height: 660px;//410px;
                     background-color: $bc_color_3;
                     border: 6px inset $bc_color_2;
                     padding: 30px 0;
                     .d-menu-f {
-                        @include widthm($pc: 50 ,$sp: 50 );
-                        background:transparent url("../images/menu/BeerTeaWaterSparkring WaterOrange JuiceCoca Cola.png") no-repeat center center;
-                        background-size: 23rem auto;
-                        height: 100%;
+                        @include widthm($pc: 100 ,$sp: 100 );
+                        background: transparent url("../images/menu/drink_menu.png") no-repeat center center;
+                        background-size: auto 30rem;
+                        height: 50%;
                     }
                     .d-menu-t {
-                        @include widthm($pc: 50 ,$sp: 50 );
-                        background:transparent url("../images/menu/beer1.png") no-repeat -90% 80%;
-                        background-size: 95% auto;
-                        height: 100%;
+                        @include widthm($pc: 100 ,$sp: 100 );
+                        background: transparent url("../images/menu/beer1.png") no-repeat center 80%;
+                        background-size: auto 100%;
+                        height: 50%;
                     }
                 }
                 .gyo-za {
@@ -762,6 +1262,36 @@ header {
     }//container
 }//grand-drink
 
+@media (max-width: 768px) {
+    #grand-drink {
+        .container {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            .row {
+                .grand {
+                    .g-menu {
+                        margin: 0;
+                        width: 100%;
+                        .g-menu-t {
+                            background-size: 20rem auto;
+                        }
+                    }
+                }
+            }
+            .drink {
+                .d-menu {
+                    width: 100%;
+                    margin: 0;
+                    .d-menu-t {
+                        background: transparent url(../images/menu/beer1.png) no-repeat bottom center;
+                    }
+                }
+            }
+        }
+    }
+}
+
 #reservation, #contact {
     .container {
         width: 85%;
@@ -769,11 +1299,11 @@ header {
         .row {
             .reservation, .contact {
                 .r-logo {
-                    background: url("../images/r_c/Reservation.png") no-repeat center center;
+                    background: url("../images/r_c/reservation.png") no-repeat center center;
                     background-size: 45% auto; 
                 }
                 .c-logo {
-                    background: url("../images/r_c/Contact.png") no-repeat center center;
+                    background: url("../images/r_c/contact.png") no-repeat center center;
                     background-size: 45% auto; 
                 }
                 .r-con, .c-con {
@@ -800,6 +1330,10 @@ header {
                             margin: 0;
                             padding: 0px;
                         }
+                        input[type="date" i]::-webkit-calendar-picker-indicator,
+                        input[type="time" i]::-webkit-calendar-picker-indicator {
+                              filter: invert(0.5);
+                        }
                         input[type="text"],
                         textarea {
                             width: 480px;
@@ -820,6 +1354,11 @@ header {
                           color: $p_color_l;
                           margin-left:10px;
                           padding-left: 5px;
+                        }
+                        select {
+                            option {
+                                color: darken($p_color_d, 20%);
+                            }
                         }
                         th,
                         td {
@@ -843,8 +1382,12 @@ header {
                     .next-back-btn {
                         text-align: center;
                         .totop {
+                            border: 1px solid $ac_color;
                             text-align: center;
                             margin: 0 auto;
+                            &:hover {
+                                border-color: darken($ac_color, 20%);
+                            }
                         }
                     }
                     .totop-b {
@@ -852,12 +1395,97 @@ header {
                     }
                 }//r-con, c-con
                 .c-con {
-                    // height: 540px;
+                    min-height: 540px;
                 }
             }//reservation
         }//row
     }//conrainer
 }//reservation
+
+@media (max-width: 1010px) {
+    #reservation, #contact {
+        .container {
+            .row {
+                .reservation, .contact {
+                    .r-con, .c-con {
+                        .r-form {
+                            input[type="text"],
+                            textarea {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #reservation, #contact {
+        .container {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            .row {
+                .reservation, .contact {
+                    .r-logo,.c-logo {
+                        background-size: 70% auto; 
+                    }
+                    .r-con, .c-con {
+                        background: url(../images/icon_150610_257_25.png) left top / 40% auto no-repeat,
+                            url(../images/icon_150610_257_25.png) right bottom / 40% auto no-repeat;
+                        padding: 20px 0;
+                        .r-form {
+                            @include widthm($pc: 80 ,$sp: 100, $mautoSp: 1, $mautoPc: 1);
+                            table {
+                                width: 95%;
+                            }
+                            .inform {
+                                margin: 0 auto;
+                                width: 100%;
+                            }
+                            th,
+                            td {
+                              display: block;
+                              width: 100%;
+                              padding: 5px;
+                            }
+                            th {
+                                padding-top: 10px;
+                                text-align: center;
+                                margin: 0;
+                            }
+                        }//r-form
+                        .next-back-btn {
+                            width: 85%;
+                            .totop {
+                                width: 100%;
+                            }
+                        }
+                    }//r-con, c-con
+                    .c-con {
+                        min-height: 540px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    #reservation, #contact {
+        .container {
+            .row {
+                .reservation, .contact {
+                    .r-logo,.c-logo {
+                        background-size: 100% auto; 
+                    }
+                }
+            }
+        }
+    }
+}
 
 #confirmation {
     .container {
@@ -866,11 +1494,11 @@ header {
         .row {
             .confirmation {
                 .con-logo {
-                    background: url("../images/r_c/Confirmation.png") no-repeat center center;
+                    background: url("../images/r_c/confirmation.png") no-repeat center center;
                     background-size: 45% auto; 
                 }
                 .r-con, .c-con {
-                    height: 800px;
+                    min-height: 800px;
                     background: url(../images/icon_150610_257_25.png) left top / 25% auto no-repeat,
                         url(../images/icon_150610_257_25.png) right bottom / 30% auto no-repeat;
                     background-color: $bc_color_3;
@@ -893,6 +1521,10 @@ header {
                             margin: 0;
                             padding: 0px;
                         }
+                        input[type="date" i]::-webkit-calendar-picker-indicator,
+                        input[type="time" i]::-webkit-calendar-picker-indicator {
+                              filter: invert(0.5);
+                        }
                         input[type="text"],
                         textarea {
                             width: 480px;
@@ -914,6 +1546,11 @@ header {
                           margin-left:10px;
                           padding-left: 5px;
                         }
+                        select {
+                            option {
+                                color: darken($p_color_d, 20%);
+                            }
+                        }
                         th,
                         td {
                           border-top: none;
@@ -921,7 +1558,7 @@ header {
                           padding: 20px;
                         }
                         th {
-                            @include fontsize(16);
+                            @include fontsize(18);
                             color: $p_color_l;
                             text-align: left;
                             margin: 0;
@@ -930,29 +1567,131 @@ header {
                             align-items: center;
                             padding-left: 50px;
                             position: relative;
-                            // width: 300px;
                         }
                     }//r-form
                     .next-back-btn {
                         .back {
+                            border: 1px solid $ac_color;
                             text-align: center;
                             margin: 0;
                             float: left;
+                            width: 45%;
+                            &:hover {
+                                border-color: darken($ac_color, 20%);
+                            }
                         }
                         .next {
+                            border: 1px solid $ac_color;
                             text-align: center;
                             margin: 0;
                             float: right;
+                            width: 45%;
+                            &:hover {
+                                border-color: darken($ac_color, 20%);
+                            }
                         }
                     } //next-back-btn
                 }//r-con, c-con
                 .c-con {
-                    height: 540px;
+                    min-height: 540px;
                 }
             }//confirmation
         }//row
     }//container
 }//confirmation
+
+@media (max-width: 1029px) {
+    #confirmation {
+        .container {
+            .row {
+                .confirmation {
+                    .r-con, .c-con {
+                        .r-form {
+                            input[type="text"],
+                            textarea {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #confirmation {
+        .container {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            .row {
+                .confirmation {
+                    .r-con, .c-con {
+                        background: url(../images/icon_150610_257_25.png) left top / 40% auto no-repeat,
+                            url(../images/icon_150610_257_25.png) right bottom / 40% auto no-repeat;
+                        padding: 20px 0;
+                        .r-form {
+                            @include widthm($pc: 80 ,$sp: 100, $mautoSp: 1, $mautoPc: 1);
+                            table {
+                                width: 95%;
+                            }
+                            .inform {
+                                margin: 0 auto;
+                                width: 100%;
+                            }
+                            input[type="text"],
+                            textarea {
+                                width: 100%;
+                            }
+                            th,
+                            td {
+                              display: block;
+                              width: 100%;
+                              padding: 5px;
+                            }
+                            th {
+                                padding-top: 10px;
+                                text-align: center;
+                                margin: 0;
+                            }
+                        }//r-form
+                        .next-back-btn {
+                            width: 85%;
+                            height: 100%;
+                            .back {
+                                width: 100%;
+                                float: none;
+                                padding-bottom: 5px;
+                            }
+                            .next {
+                                width: 100%;
+                                display: block;
+                                margin: 10px 0 auto;
+                                float: none;
+                                padding-bottom: 5px;
+                            }
+                        } //next-back-btn
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    #confirmation {
+        .container {
+            .row {
+                .confirmation {
+                    .con-logo {
+                        background-size: 100% auto;
+                    }
+                }
+            }
+        }
+    }
+}
 
 #complete {
     .container {
@@ -961,7 +1700,7 @@ header {
         .row {
             .complete {
                 .con-logo {
-                    background: url("../images/r_c/Confirmation.png") no-repeat center center;
+                    background: url("../images/r_c/confirmation.png") no-repeat center center;
                     background-size: 45% auto; 
                 }
                 .tk_bt {
@@ -978,14 +1717,19 @@ header {
                     p {
                         color: $ac_color;
                         font-weight: bold;
-                        @include fontsize(30);
+                        @include fontsize(40);
                         margin-top: 40px;
                         text-align: center;
                     }
                     .next-back-btn {
                         .totop {
+                            border: 1px solid $ac_color;
                             text-align: center;
                             margin: 0 auto;
+                            width: 54%;
+                            &:hover {
+                                border-color: darken($ac_color, 20%);
+                            }
                         }
                     }
                     .totop-b {
@@ -997,6 +1741,55 @@ header {
     }//container
 }//complete
 
+@media (max-width: 768px) {
+    #complete {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        .container {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            .row {
+                .complete {
+                    .tk_bt {
+                        background: url(../images/icon_150610_257_25.png) left top / 15% auto no-repeat,
+                            url(../images/icon_150610_257_25.png) 18.5% top / 15% auto no-repeat,
+                            url(../images/icon_150610_257_25.png) 37% top / 15% auto no-repeat,
+                            url(../images/icon_150610_257_25.png) right bottom / 15% auto no-repeat,
+                            url(../images/icon_150610_257_25.png) right 18.5% bottom / 15% auto no-repeat,
+                            url(../images/icon_150610_257_25.png) right 37% bottom / 15% auto no-repeat;
+                        background-color: $bc_color_3;
+                        p {
+                            margin-bottom: 1rem;
+                        }
+                    }
+                    .next-back-btn {
+                        width: 85%;
+                        .totop {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+@media (max-width: 550px) {
+    #complete {
+        .container {
+            .row {
+                .complete {
+                    .con-logo {
+                        background-size: 100% auto;
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
 #shops {
     .container {
         width: 85%;
@@ -1006,7 +1799,7 @@ header {
                 height: 50%;
                 padding: 30px 0;
                 .s1-logo {
-                    background: url("../images/shop/Diamond Street.png") no-repeat center center;
+                    background: url("../images/shop/diamond_street.png") no-repeat center center;
                 }
                 .s1-fig {
                     background: url("../images/shop/shop-1.png") no-repeat center center;
@@ -1020,7 +1813,7 @@ header {
                 height: 50%;
                 padding: 30px 0;
                 .s2-logo {
-                    background: url("../images/shop/Forest Street.png") no-repeat center center;
+                    background: url("../images/shop/forest_street.png") no-repeat center center;
                 }
                 .s2-fig {
                     background: url("../images/shop/shop-2.png") no-repeat center center;
@@ -1034,7 +1827,7 @@ header {
                 height: 50%;
                 padding: 30px 0;
                 .s3-logo {
-                    background: url("../images/shop/Silver Road.png") no-repeat center center;
+                    background: url("../images/shop/silver_road.png") no-repeat center center;
                 }
                 .s3-fig {
                     background: url("../images/shop/shop-3.png") no-repeat center center;
@@ -1048,7 +1841,7 @@ header {
                 height: 50%;
                 padding: 30px 0;
                 .s4-logo {
-                    background: url("../images/shop/Sky Blue City.png") no-repeat center center;
+                    background: url("../images/shop/sky_blue_city.png") no-repeat center center;
                 }
                 .s4-fig {
                     background: url("../images/shop/shop-4.png") no-repeat center center;
@@ -1061,6 +1854,28 @@ header {
         } //row
     }//container
 }//shops
+
+@media (max-width: 768px) {
+    #shops {
+        .container {
+            width: 100%;
+            padding: 0;
+            margin: 30px 0 0 0;
+            .row {
+                .shop1, .shop2, .shop3, .shop4 {
+                    padding: 0;
+                    .s1-fig, .s2-fig, .s3-fig, .s4-fig {
+                        background-size: 90% auto;
+                        height: 250px;
+                    }
+                    .s-b {
+                        width: 85%;
+                    }
+                }
+            }
+        }
+    }
+}
 
 footer {
     width: 100%;
@@ -1120,3 +1935,27 @@ footer {
         }//row
     }//container
 }
+
+@media (max-width: 768px) {
+    footer {
+        .container {
+            padding: 0;
+            .footer-line {
+                width: 100%;
+            }
+            .fs {
+                width: 100%;
+                .f-menu {
+                    padding: 0 5px;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+.slide-bottom {
+   opacity: 0;
+   transform: translateY(30px);
+   transition: all 1s 0s ease-out;
+ }
