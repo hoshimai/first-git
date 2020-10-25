@@ -1027,7 +1027,7 @@ header {
     padding: 0; }
     #news-contents .container .row .news-cont {
       padding: 20px 10px;
-      background: url(../images/icon_150610_257_25.png) no-repeat top left/60%, url(../images/icon_150610_257_25.png) right bottom/60% no-repeat; }
+      background: url(../images/icon_150610_257_25.png) no-repeat top left/50%, url(../images/icon_150610_257_25.png) right bottom/50% no-repeat; }
       #news-contents .container .row .news-cont .title .date {
         display: block; }
       #news-contents .container .row .news-cont .title:hover {
